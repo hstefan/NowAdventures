@@ -10,10 +10,16 @@ public class TiledCharacter : MonoBehaviour {
     [SerializeField]
     private Vector3 BaseOffset;
     private Animator anim;
+    private Coroutine moveCoroutine;
 
     void Awake() {
         mapOrigin = FindObjectOfType<Tiled2Unity.TiledMap>().transform;
         anim = GetComponent<Animator>();
+    }
+
+    void Start()
+    {
+        moveCoroutine = null;
     }
 
 #if UNITY_EDITOR
@@ -40,9 +46,24 @@ public class TiledCharacter : MonoBehaviour {
         return mapOrigin.transform.position + BaseOffset + new Vector3(x, y, 0f);
     }
 
+    public void TeleportToTile(int x, int y)
+    {
+        TileX = x;
+        TileY = y;
+        if (moveCoroutine != null)
+        {
+            StopCoroutine(moveCoroutine);
+        }
+        rigidbody2D.MovePosition(getPositionForTile(x, y));
+    }
+
     public void MoveToTile(int x, int y, float duration)
     {
-        StartCoroutine(MoveToTileCo(x, y, duration));
+        if (moveCoroutine != null)
+        {
+            StopCoroutine(moveCoroutine);
+        }
+        moveCoroutine = StartCoroutine(MoveToTileCo(x, y, duration));
     }
 
     public IEnumerator MoveToTileCo(int x, int y, float duration)

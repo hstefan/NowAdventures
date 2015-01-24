@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5df4937ba29b3f43bdd40bc65fa7725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDuration: .150000006
+  moveDuration: .349999994
   moveInterval: .349999994
   direction: 0
   equippedItem: 0

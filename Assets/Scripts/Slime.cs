@@ -9,7 +9,7 @@ public class Slime : MonoBehaviour
         if (other.CompareTag("arrow"))
         {
             Destroy(gameObject);
-            Destroy(other.gameObject);
+            other.SendMessage("ResetPosition");
         }
     }
 }
