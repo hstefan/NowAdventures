@@ -162,19 +162,23 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                if (controllable) GameControl.Instance.GameOver();
                 Destroy(gameObject);
             }
         }
         else if (other.CompareTag("exit_door"))
         {
+            if (controllable) GameControl.Instance.GameOver();
             Destroy(gameObject);
         }
         else if (other.CompareTag("hole"))
         {
+            if (controllable) GameControl.Instance.GameOver();
             Destroy(gameObject);
         }
         else if (other.CompareTag("arrow"))
         {
+            if (controllable) GameControl.Instance.GameOver();
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
