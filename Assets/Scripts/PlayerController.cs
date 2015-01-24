@@ -6,7 +6,7 @@ public enum PlayerDirection
     None, Up, Down, Left, Right
 }
 
-enum PlayerItem
+public enum PlayerItem
 {
     None = 0,
     Sword,
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     private PlayerDirection direction;
     private PlayerDirection new_direction;
     [SerializeField, HideInInspector]
-    private PlayerItem equippedItem;
+    public PlayerItem equippedItem;
 
     private bool controllable;
     private Animator anim;
