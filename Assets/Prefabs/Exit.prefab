@@ -55,8 +55,8 @@ BoxCollider2D:
   m_GameObject: {fileID: 161602}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: .800000012, y: .800000012}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!114 &11461600
 MonoBehaviour:
@@ -80,7 +80,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffccfabce9f09c2468c19147284603b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapOrigin: {fileID: 0}
   TileX: 2
   TileY: -3
   BaseOffset: {x: .5, y: .5, z: 0}
