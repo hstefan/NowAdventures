@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
                 if (direction != PlayerDirection.None)
                 {
                     // Split player
-                    GameObject new_player_go = (GameObject)Instantiate(gameObject);
+                    GameObject new_player_go = (GameObject) Instantiate(gameObject);
                     var player_controller = new_player_go.GetComponent<PlayerController>();
                     player_controller.new_direction = direction;
                     player_controller.direction = PlayerDirection.None;
@@ -138,8 +138,6 @@ public class PlayerController : MonoBehaviour
                     {
                         direction = PlayerDirection.None;
                         new_direction = PlayerDirection.None;
-                        anim.SetInteger("SpeedX", 0);
-                        anim.SetInteger("SpeedY", 0);
                     }
                 }
                 else
@@ -158,6 +156,7 @@ public class PlayerController : MonoBehaviour
         {
             if (equippedItem == PlayerItem.Sword)
             {
+                anim.SetTrigger("Attacking");
                 Destroy(other.gameObject);
             }
             else

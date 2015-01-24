@@ -75,8 +75,9 @@ public class TiledCharacter : MonoBehaviour {
         Vector3 prev_pos = transform.position;
         Vector3 new_pos = getPositionForTile(x, y);
         if (anim != null) {
-            anim.SetInteger("SpeedX", Mathf.RoundToInt(speed.x));
-            anim.SetInteger("SpeedY", Mathf.RoundToInt(speed.y));
+            anim.SetFloat("DirX", speed.x);
+            anim.SetFloat("DirY", speed.y);
+            anim.SetFloat("Speed", 1f);
         }
         
         for (float t = 0; t <= duration; t += Time.deltaTime)
