@@ -32,16 +32,12 @@ public class PlayerController : MonoBehaviour
 
 	private bool controllable;
 
-	PlayerController()
-	{
-		direction = PlayerDirection.None;
-		new_direction = PlayerDirection.None;
-		equippedItem = PlayerItem.None;
-	}
-
 	void Awake()
 	{
 		tiled = GetComponent<TiledCharacter>();
+        direction = PlayerDirection.None;
+        new_direction = PlayerDirection.None;
+        equippedItem = PlayerItem.None;
 	}
 
 	void Start()
@@ -85,8 +81,10 @@ public class PlayerController : MonoBehaviour
 				{
 					// Split player
 					GameObject new_player_go = (GameObject)Instantiate(gameObject);
+                    var player_controller = new_player_go.GetComponent<PlayerController>();
+                    player_controller.new_direction = direction;
+                    player_controller.direction = PlayerDirection.None;
 				}
-				new_direction = PlayerDirection.None;
 			}
 			direction = new_direction;
 			if (direction != PlayerDirection.None)
