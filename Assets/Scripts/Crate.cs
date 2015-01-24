@@ -12,6 +12,11 @@ public class Crate : MonoBehaviour
         tiled = GetComponent<TiledCharacter>();
     }
 
+    void Start()
+    {
+        locked = false;
+    }
+
     public bool CanMove(PlayerDirection dir)
     {
         if (locked) { return false; }
@@ -38,6 +43,10 @@ public class Crate : MonoBehaviour
         {
             Destroy(other.gameObject);
             locked = true;
+            Color col = renderer.material.color;
+            col.a = 0.5f;
+            renderer.material.color = col;
+            Destroy(collider2D);
         }
     }
 }

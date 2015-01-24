@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         bool first_player = FindObjectsOfType(typeof(PlayerController)).Length <= 1;
-        Debug.Log(FindObjectsOfType(typeof(PlayerController)).Length);
         controllable = first_player;
 
         if (!controllable)
@@ -89,6 +88,7 @@ public class PlayerController : MonoBehaviour
                     var player_controller = new_player_go.GetComponent<PlayerController>();
                     player_controller.new_direction = direction;
                     player_controller.direction = PlayerDirection.None;
+                    player_controller.equippedItem = equippedItem;
                 }
             }
             direction = new_direction;
@@ -172,6 +172,11 @@ public class PlayerController : MonoBehaviour
         else if (other.CompareTag("hole"))
         {
             Destroy(gameObject);
+        }
+        else if (other.CompareTag("arrow"))
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
     }
 }

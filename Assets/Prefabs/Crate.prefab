@@ -75,12 +75,11 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153070}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffccfabce9f09c2468c19147284603b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapOrigin: {fileID: 0}
   TileX: 2
   TileY: -9
   BaseOffset: {x: .5, y: .5, z: 0}

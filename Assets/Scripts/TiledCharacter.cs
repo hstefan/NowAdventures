@@ -3,8 +3,8 @@ using System.Collections;
 
 [ExecuteInEditMode]
 public class TiledCharacter : MonoBehaviour {
-    [SerializeField]
     private Transform mapOrigin;
+
     public int TileX;
     public int TileY;
     [SerializeField]
@@ -12,6 +12,7 @@ public class TiledCharacter : MonoBehaviour {
     private Animator anim;
 
     void Awake() {
+        mapOrigin = FindObjectOfType<Tiled2Unity.TiledMap>().transform;
         anim = GetComponent<Animator>();
     }
 
