@@ -4,8 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(TiledCharacter))]
 public class Arrow : MonoBehaviour
 {
-    [SerializeField]
-    private float moveDuration;
+    public float MoveDuration;
 
     private TiledCharacter tiled;
 
@@ -36,8 +35,8 @@ public class Arrow : MonoBehaviour
         {
             int x = (int)transform.right.x;
             int y = (int)transform.right.y;
-            tiled.MoveToTile(tiled.TileX + x, tiled.TileY + y, moveDuration);
-            yield return new WaitForSeconds(moveDuration);
+            tiled.MoveToTile(tiled.TileX + x, tiled.TileY + y, MoveDuration);
+            yield return new WaitForSeconds(MoveDuration);
         }
     }
 

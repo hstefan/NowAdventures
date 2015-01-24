@@ -30,6 +30,30 @@ public class ObjectImporter : ICustomTiledImporter {
                     tiledComp.TileX = Mathf.RoundToInt(pos.x / map.TileWidth);
                     tiledComp.TileY = Mathf.RoundToInt(pos.y / map.TileHeight);
                 }
+
+                if (props["AddComp"] == "Arrow") {
+                    var arrow = inst.GetComponent<Arrow>();
+                    if (props.ContainsKey("MoveDuration")) {
+                        arrow.MoveDuration = float.Parse(props["MoveDuration"]);
+                    }
+                    if (props.ContainsKey("Facing")) {
+                        var facing = props["Facing"];
+                        switch (facing) {
+                        case "Up":
+                            inst.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+                            break;
+                        case "Down":
+                            inst.transform.rotation = Quaternion.Euler(0f, 0f, -90f);
+                            break;
+                        case "Left":
+                            inst.transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+                            break;
+                        case "Right":
+                            inst.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                            break;
+                        }
+                    }
+                }
             }
         }
     }

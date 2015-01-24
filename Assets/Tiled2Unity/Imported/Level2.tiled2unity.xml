@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 1/24/2015 11:11:30 AM-->
+<!--Last exported: 1/24/2015 3:51:53 PM-->
 <Tiled2Unity version="0.9.7.4">
   <AssignMaterial mesh="mesh_[00]_[00]" material="floor" sortingLayerName="" sortingOrder="0" />
   <Prefab name="Level2" numTilesWide="9" numTilesHigh="13" tileWidth="40" tileHeight="40" scale="0.025">
@@ -13,6 +13,38 @@
         <EdgeCollider2D>
           <Points>-9,11 111,11 111,-189 71,-189 71,-429 31,-429 31,-349 -49,-349 -49,-429 -89,-429 -89,-349 -169,-349 -169,-309 -49,-309 -49,-229 -9,-229 -9,-309 31,-309 31,-149 -9,-149 -9,-109 31,-109 31,-69 -9,-69 -9,11</Points>
         </EdgeCollider2D>
+      </GameObject>
+    </GameObject>
+    <GameObject name="Object Layer 2">
+      <GameObject name="TileObject" x="120" y="-480">
+        <Property name="AddComp" value="Arrow" />
+        <Property name="Facing" value="Up" />
+      </GameObject>
+      <GameObject name="TileObject" x="160" y="-320">
+        <Property name="AddComp" value="Arrow" />
+        <Property name="Facing" value="Down" />
+      </GameObject>
+      <GameObject name="TileObject" x="200" y="-200">
+        <Property name="AddComp" value="Arrow" />
+        <Property name="Facing" value="Right" />
+      </GameObject>
+      <GameObject name="TileObject" x="40" y="-400">
+        <Property name="AddComp" value="TouchPlate" />
+      </GameObject>
+      <GameObject name="TileObject" x="240" y="-80">
+        <Property name="AddComp" value="Exit" />
+      </GameObject>
+      <GameObject name="TileObject" x="280" y="-80">
+        <Property name="AddComp" value="Hole" />
+      </GameObject>
+      <GameObject name="TileObject" x="240" y="-120">
+        <Property name="AddComp" value="Hole" />
+      </GameObject>
+      <GameObject name="TileObject" x="200" y="-80">
+        <Property name="AddComp" value="Hole" />
+      </GameObject>
+      <GameObject name="TileObject" x="240" y="-160">
+        <Property name="AddComp" value="Crate" />
       </GameObject>
     </GameObject>
   </Prefab>
