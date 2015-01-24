@@ -180,7 +180,7 @@ public class PlayerController : MonoBehaviour
         {
             if (controllable) GameControl.Instance.GameOver();
             Destroy(gameObject);
-            Destroy(other.gameObject);
+            other.SendMessage("ResetPosition");
         }
     }
 }
