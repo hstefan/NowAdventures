@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-enum PlayerDirection
+public enum PlayerDirection
 {
     None, Up, Down, Left, Right
 }
@@ -113,9 +113,27 @@ public class PlayerController : MonoBehaviour
                     default: break;
                 }
 
-                if (tiled.CollideWithBlocker(dir))
+                Collider2D coll = tiled.CollideWithBlocker(dir);
+                if (coll != null)
                 {
-                    direction = PlayerDirection.None;
+                    if (coll.CompareTag("crate"))
+                    {
+                        Debug.Log("hi crate!");
+                        Crate crate = coll.GetComponent<Crate>();
+                        if (equippedItem == PlayerItem.PowerGloves && crate.CanMove(direction))
+                        {
+                            Debug.Log("PUSHIN' MAH CRATES");
+                            crate.Push(direction, moveDuration * 0.75f);
+                        }
+                        else
+                        {
+                            direction = PlayerDirection.None;
+                        }
+                    }
+                    else
+                    {
+                        direction = PlayerDirection.None;
+                    }
                 }
                 else
                 {
@@ -141,6 +159,10 @@ public class PlayerController : MonoBehaviour
             }
         }
         else if (other.CompareTag("exit_door"))
+        {
+            Destroy(gameObject);
+        }
+        else if (other.CompareTag("hole"))
         {
             Destroy(gameObject);
         }

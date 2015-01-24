@@ -55,13 +55,29 @@ public class TiledCharacter : MonoBehaviour {
 		rigidbody2D.MovePosition(new_pos);
 	}
 
-	public bool CollideWithBlocker(Vector2 direction) {
+	public Collider2D CollideWithBlocker(Vector2 direction, Collider2D skip = null) {
 		var hits = Physics2D.RaycastAll(getRealPosition(), direction, 1.0f);
 		for (int i = 0; i < hits.Length; ++i) {
-			if (hits[i].collider.gameObject.layer == 9) {
-				return true;
-			}
+            if (hits[i].collider == skip) { continue; }
+			if (!hits[i].collider.isTrigger) { return hits[i].collider; }
 		}
-		return false;
+		return null;
 	}
+
+    public static Vector2 Vector2FromPlayerDirection(PlayerDirection direction)
+    {
+        switch (direction)
+        {
+            case PlayerDirection.Up:
+                return Vector2.up;
+            case PlayerDirection.Down:
+                return -Vector2.up;
+            case PlayerDirection.Left:
+                return -Vector2.right;
+            case PlayerDirection.Right:
+                return Vector2.right;
+            default:
+                return Vector2.zero;
+        }
+    }
 }
