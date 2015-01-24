@@ -4,7 +4,7 @@
 <!--Last exported: 1/24/2015 2:06:44 AM-->
 <Tiled2Unity version="0.9.7.4">
   <AssignMaterial mesh="mesh_[00]_[00]" material="red_square" sortingLayerName="" sortingOrder="0" />
-  <Prefab name="Level0" numTilesWide="5" numTilesHigh="11" tileWidth="64" tileHeight="64" scale="0.01">
+  <Prefab name="Level0" numTilesWide="5" numTilesHigh="11" tileWidth="64" tileHeight="64" scale="0.015625">
     <GameObject name="Tile_Layer_1_00">
       <GameObject copy="mesh_[00]_[00]" />
     </GameObject>

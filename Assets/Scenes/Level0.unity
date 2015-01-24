@@ -134,7 +134,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -153,7 +153,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 542254474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .680000007, y: -1.36000001, z: -10}
+  m_LocalPosition: {x: 2.5, y: -6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -223,11 +223,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 432864, guid: 89fbe42d6a607584683b840ca494485f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.958000004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432864, guid: 89fbe42d6a607584683b840ca494485f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.83999991
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432864, guid: 89fbe42d6a607584683b840ca494485f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -400,8 +400,8 @@ Transform:
   m_PrefabInternal: {fileID: 1043979019}
   m_GameObject: {fileID: 1197694185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.958000004, y: 2.83999991, z: 0}
-  m_LocalScale: {x: .00999999978, y: .00999999978, z: .00999999978}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .015625, y: .015625, z: .015625}
   m_Children:
   - {fileID: 687549693}
   - {fileID: 713605111}
@@ -471,7 +471,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1297154007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.28195488, y: -1.95990348, z: 0}
+  m_LocalPosition: {x: 2.5, y: -10.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -485,7 +485,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .639999986, y: .639999986}
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!50 &1297154011
 Rigidbody2D:
@@ -514,7 +514,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapData: {fileID: 1197694187}
-  TileX: 3
-  TileY: 7
-  BaseOffset: {x: .319993556, y: -.319993556, z: 0}
-  rayScale: 1.20000005
+  TileX: 2
+  TileY: -11
+  BaseOffset: {x: .5, y: .5, z: 0}
