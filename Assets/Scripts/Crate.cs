@@ -15,8 +15,15 @@ public class Crate : MonoBehaviour
     public bool CanMove(PlayerDirection dir)
     {
         if (locked) { return false; }
-        Collider2D coll = tiled.CollideWithBlocker(TiledCharacter.Vector2FromPlayerDirection(dir), collider2D);
-        return coll == null;
+        Vector2 vdir = TiledCharacter.Vector2FromPlayerDirection(dir);
+        var hits = Physics2D.RaycastAll(tiled.GetRealPosition(), vdir, 1.0f);
+        for (int i = 0; i < hits.Length; ++i)
+        {
+            if (hits[i].collider == collider2D) { continue; }
+            if (hits[i].collider.CompareTag("hole")) { continue; }
+            if (!hits[i].collider.isTrigger) { return false; }
+        }
+        return true;
     }
 
     public void Push(PlayerDirection dir, float duration)

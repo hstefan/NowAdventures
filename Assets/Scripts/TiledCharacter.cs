@@ -24,7 +24,7 @@ public class TiledCharacter : MonoBehaviour {
 	}
 #endif
 
-	private Vector3 getRealPosition()
+	public Vector3 GetRealPosition()
 	{
 		return getPositionForTile(TileX, TileY);
 	}
@@ -56,7 +56,7 @@ public class TiledCharacter : MonoBehaviour {
 	}
 
 	public Collider2D CollideWithBlocker(Vector2 direction, Collider2D skip = null) {
-		var hits = Physics2D.RaycastAll(getRealPosition(), direction, 1.0f);
+		var hits = Physics2D.RaycastAll(GetRealPosition(), direction, 1.0f);
 		for (int i = 0; i < hits.Length; ++i) {
             if (hits[i].collider == skip) { continue; }
 			if (!hits[i].collider.isTrigger) { return hits[i].collider; }

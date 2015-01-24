@@ -118,21 +118,21 @@ public class PlayerController : MonoBehaviour
                 {
                     if (coll.CompareTag("crate"))
                     {
-                        Debug.Log("hi crate!");
                         Crate crate = coll.GetComponent<Crate>();
                         if (equippedItem == PlayerItem.PowerGloves && crate.CanMove(direction))
                         {
-                            Debug.Log("PUSHIN' MAH CRATES");
                             crate.Push(direction, moveDuration * 0.75f);
                         }
                         else
                         {
                             direction = PlayerDirection.None;
+                            new_direction = PlayerDirection.None;
                         }
                     }
                     else
                     {
                         direction = PlayerDirection.None;
+                        new_direction = PlayerDirection.None;
                     }
                 }
                 else
