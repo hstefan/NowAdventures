@@ -1,0 +1,9 @@
+*.sln
+*.suo
+*.csproj
+*.unityproj
+/Library
+/Temp
+/obj
+Thumbs.db
+Build
