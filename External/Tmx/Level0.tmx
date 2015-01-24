@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="3" height="9" tilewidth="64" tileheight="64" nextobjectid="8">
+ <properties>
+  <property name="unity:scale" value="0.01"/>
+ </properties>
+ <tileset firstgid="1" name="Squares" tilewidth="64" tileheight="64">
+  <tile id="0">
+   <image width="64" height="64" source="../../Assets/Sprites/red_square.png"/>
+  </tile>
+  <tile id="1">
+   <image width="64" height="64" source="../../Assets/Sprites/grey_square.png"/>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="3" height="9">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgYGRAAEYkmtoYAATMABg=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="7" x="192" y="128">
+   <polyline points="0,0 0,448 -192,448 -192,0 -128,0 -128,-128 -64,-128 -64,0 0,0"/>
+  </object>
+ </objectgroup>
+</map>
