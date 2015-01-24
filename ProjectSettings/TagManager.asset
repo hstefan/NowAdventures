@@ -5,6 +5,8 @@ TagManager:
   tags:
   - slime
   - exit_door
+  - crate
+  - hole
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
