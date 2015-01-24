@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     private PlayerItem equippedItem;
 
     private bool controllable;
+    private Animator anim;
 
     void Awake()
     {
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
         direction = PlayerDirection.None;
         new_direction = PlayerDirection.None;
         equippedItem = PlayerItem.None;
+        anim = GetComponent<Animator>();
     }
 
     void Start()
@@ -133,6 +135,8 @@ public class PlayerController : MonoBehaviour
                     {
                         direction = PlayerDirection.None;
                         new_direction = PlayerDirection.None;
+                        anim.SetInteger("SpeedX", 0);
+                        anim.SetInteger("SpeedY", 0);
                     }
                 }
                 else

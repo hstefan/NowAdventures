@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="5" height="11" tilewidth="64" tileheight="64" nextobjectid="23">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="5" height="11" tilewidth="40" tileheight="40" nextobjectid="25">
  <properties>
-  <property name="unity:scale" value="0.01"/>
+  <property name="unity:scale" value="0.025"/>
  </properties>
- <tileset firstgid="1" name="Squares" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="Default" tilewidth="40" tileheight="40">
   <tile id="0">
-   <image width="64" height="64" source="../../Assets/Sprites/red_square.png"/>
+   <image width="40" height="40" source="../../Assets/Sprites/exit_door.png"/>
   </tile>
   <tile id="1">
-   <image width="64" height="64" source="../../Assets/Sprites/grey_square.png"/>
+   <image width="40" height="40" source="../../Assets/Sprites/floor.png"/>
+  </tile>
+  <tile id="2">
+   <image width="40" height="40" source="../../Assets/Sprites/player.png"/>
+  </tile>
+  <tile id="3">
+   <image width="40" height="40" source="../../Assets/Sprites/slime.png"/>
   </tile>
  </tileset>
  <layer name="Tile Layer 1" width="5" height="11">
   <data encoding="base64" compression="zlib">
-   eJxjYCANMBIhxoiEB1IMAAgIABg=
+   eJxjYCANMBEhxoSEB1IMAA80AC8=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
   <properties>
    <property name="unity:layer" value="Blockers"/>
   </properties>
-  <object id="22" x="128" y="128">
-   <polyline points="0,0 0,128 -64,128 -64,576 128,576 128,128 64,128 64,0 0,0"/>
+  <object id="24" x="80" y="80">
+   <polyline points="0,0 0,80 -40,80 -40,360 80,360 80,80 40,80 40,0 0,0"/>
   </object>
  </objectgroup>
 </map>
