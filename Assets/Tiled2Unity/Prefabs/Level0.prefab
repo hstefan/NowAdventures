@@ -57,23 +57,23 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 432872}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Object Layer 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &132874
+--- !u!1 &156690
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 432874}
-  - 68: {fileID: 6832874}
-  m_Layer: 0
+  - 4: {fileID: 456690}
+  - 68: {fileID: 6856690}
+  m_Layer: 9
   m_Name: PolylineObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.958000004, y: 2.83999991, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .00999999978, y: .00999999978, z: .00999999978}
   m_Children:
   - {fileID: 432866}
@@ -129,17 +129,17 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 432874}
+  - {fileID: 456690}
   m_Father: {fileID: 432864}
   m_RootOrder: 1
---- !u!4 &432874
+--- !u!4 &456690
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 132874}
+  m_GameObject: {fileID: 156690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 192, y: -128, z: 0}
+  m_LocalPosition: {x: 128, y: -128, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 432872}
@@ -171,24 +171,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132868}
   m_Mesh: {fileID: 4300000, guid: a22de08a52dea554fa65ad4c3f4a9a78, type: 3}
---- !u!68 &6832874
+--- !u!68 &6856690
 EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 132874}
+  m_GameObject: {fileID: 156690}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Points:
   - {x: 0, y: 0}
-  - {x: 0, y: -448}
-  - {x: -192, y: -448}
-  - {x: -192, y: 0}
-  - {x: -128, y: 0}
-  - {x: -128, y: 128}
-  - {x: -64, y: 128}
-  - {x: -64, y: 0}
+  - {x: 0, y: -128}
+  - {x: -64, y: -128}
+  - {x: -64, y: -576}
+  - {x: 128, y: -576}
+  - {x: 128, y: -128}
+  - {x: 64, y: -128}
+  - {x: 64, y: 0}
   - {x: 0, y: 0}
 --- !u!114 &11432870
 MonoBehaviour:
@@ -201,8 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0619e460a775cc458d37cb4a214a189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumTilesWide: 3
-  NumTilesHigh: 9
+  NumTilesWide: 5
+  NumTilesHigh: 11
   TileWidth: 64
   TileHeight: 64
 --- !u!114 &11432872
