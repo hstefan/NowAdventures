@@ -77,6 +77,9 @@ public class PlayerController : MonoBehaviour
     private IEnumerator movementLoop() {
         while (true)
         {
+            float move_interval = equippedItem == PlayerItem.Boots ? moveInterval * 0.5f : moveInterval;
+            float move_duration = equippedItem == PlayerItem.Boots ? move_interval : moveDuration;
+
             if (direction != new_direction)
             {
                 if (direction != PlayerDirection.None)
@@ -123,7 +126,7 @@ public class PlayerController : MonoBehaviour
                         Crate crate = coll.GetComponent<Crate>();
                         if (equippedItem == PlayerItem.PowerGloves && crate.CanMove(direction))
                         {
-                            crate.Push(direction, moveDuration * 0.75f);
+                            crate.Push(direction, move_duration * 0.75f);
                         }
                         else
                         {
@@ -141,11 +144,11 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    tiled.MoveToTile(x, y, moveDuration);
+                    tiled.MoveToTile(x, y, move_duration);
                 }
             }
 
-            yield return new WaitForSeconds(moveInterval);
+            yield return new WaitForSeconds(move_interval);
         }
     }
 
