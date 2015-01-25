@@ -1,71 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="14" height="13" tilewidth="40" tileheight="40" backgroundcolor="#004040" nextobjectid="41">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="14" height="13" tilewidth="40" tileheight="40" backgroundcolor="#004040" nextobjectid="63">
  <properties>
   <property name="unity:scale" value="0.025"/>
  </properties>
- <tileset firstgid="1" source="Dungeon.tsx"/>
- <layer name="Tile Layer 1" width="14" height="13">
+ <tileset firstgid="1" source="NewDungeon.tsx"/>
+ <tileset firstgid="29" source="Gameplay.tsx"/>
+ <layer name="Tile Background" width="14" height="13">
+  <properties>
+   <property name="unity:sortingLayerName" value="Background"/>
+  </properties>
   <data encoding="base64" compression="zlib">
-   eJxjZGBgYKQCZiBDPbGAVPsIyeGyg1QzCekjZA8uM3G5CZc+UgAh/+FyE7nxSI+0hA0DALH8AHs=
+   eJyNkEsKwCAMRDWKlNKt3v+o7WICw2BSFw8/JHk6s5QyiSXnPxaotI/gPvvooAHDHL3beUfiqMl7fb4BdkSuhTr1eH0Pei74Kv2X61vgucnXyel7fadn9WAdlGXDOjZ9movP1kyzPpP5nO8ulxMy3ykvmpUK2g==
   </data>
  </layer>
- <objectgroup name="Object Layer 2">
-  <object id="12" gid="8" x="320" y="360">
-   <properties>
-    <property name="Target" value="arrow_1"/>
-   </properties>
-  </object>
-  <object id="13" gid="8" x="440" y="440">
+ <layer name="Tile Decoration" width="14" height="13">
+  <properties>
+   <property name="unity:sortingLayerName" value="Background"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgYID5A9o6CkQEAOXgAGA==
+  </data>
+ </layer>
+ <objectgroup name="Gameplay">
+  <properties>
+   <property name="ObjId" value="arrow_1"/>
+  </properties>
+  <object id="41" gid="33" x="80" y="120"/>
+  <object id="42" gid="29" x="440" y="440">
    <properties>
     <property name="Target" value="arrow_3"/>
    </properties>
   </object>
-  <object id="14" gid="8" x="160" y="200">
+  <object id="43" gid="31" x="160" y="80"/>
+  <object id="44" gid="31" x="80" y="320"/>
+  <object id="45" gid="31" x="40" y="360"/>
+  <object id="46" gid="31" x="440" y="480">
+   <properties>
+    <property name="ObjId" value="arrow_2"/>
+   </properties>
+  </object>
+  <object id="47" gid="31" x="480" y="120">
+   <properties>
+    <property name="ObjId" value="arrow_3"/>
+   </properties>
+  </object>
+  <object id="48" gid="34" x="320" y="120"/>
+  <object id="49" gid="34" x="440" y="120"/>
+  <object id="50" gid="34" x="440" y="360"/>
+  <object id="51" gid="34" x="160" y="400"/>
+  <object id="52" gid="34" x="160" y="280"/>
+  <object id="53" gid="29" x="160" y="200">
    <properties>
     <property name="Target" value="arrow_2"/>
    </properties>
   </object>
-  <object id="15" gid="7" x="320" y="120"/>
-  <object id="16" gid="7" x="160" y="280"/>
-  <object id="18" gid="3" x="240" y="400"/>
-  <object id="19" gid="2" x="80" y="320">
+  <object id="54" gid="29" x="320" y="360">
    <properties>
-    <property name="Facing" value="Right"/>
+    <property name="Target" value="arrow_1"/>
    </properties>
   </object>
-  <object id="20" gid="7" x="440" y="360"/>
-  <object id="21" gid="2" x="40" y="360">
-   <properties>
-    <property name="Facing" value="Right"/>
-   </properties>
-  </object>
-  <object id="22" gid="2" x="160" y="80">
-   <properties>
-    <property name="Facing" value="Down"/>
-    <property name="ObjId" value="arrow_1"/>
-   </properties>
-  </object>
-  <object id="23" gid="4" x="80" y="120"/>
-  <object id="30" gid="7" x="160" y="400"/>
-  <object id="31" gid="2" x="480" y="120">
-   <properties>
-    <property name="Facing" value="Left"/>
-    <property name="ObjId" value="arrow_3"/>
-   </properties>
-  </object>
-  <object id="32" gid="7" x="440" y="120"/>
-  <object id="33" gid="2" x="440" y="480">
-   <properties>
-    <property name="Facing" value="Up"/>
-    <property name="ObjId" value="arrow_2"/>
-   </properties>
-  </object>
-  <object id="34" gid="5" x="240" y="440"/>
-  <object id="35" gid="5" x="160" y="160"/>
-  <object id="36" gid="5" x="120" y="320"/>
-  <object id="37" gid="5" x="120" y="360"/>
-  <object id="38" gid="5" x="200" y="360"/>
-  <object id="39" gid="5" x="120" y="280"/>
-  <object id="40" gid="5" x="400" y="360"/>
+  <object id="55" gid="32" x="160" y="160"/>
+  <object id="56" gid="32" x="120" y="280"/>
+  <object id="57" gid="32" x="120" y="320"/>
+  <object id="58" gid="32" x="120" y="360"/>
+  <object id="59" gid="32" x="200" y="360"/>
+  <object id="60" gid="32" x="400" y="360"/>
+  <object id="61" gid="32" x="240" y="440"/>
+  <object id="62" gid="30" x="240" y="400"/>
  </objectgroup>
+ <layer name="Tile Foreground" width="14" height="13">
+  <properties>
+   <property name="unity:sortingLayerName" value="Foreground"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgYIAnFyGx0zIBE08JuZHtoCWjpF5i52MKMHv7EFXeU2EcNtwIAOmADCA==
+  </data>
+ </layer>
 </map>

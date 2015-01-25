@@ -50,9 +50,11 @@
    <image width="40" height="40" source="../../Assets/Sprites/touchplate.png"/>
   </tile>
  </tileset>
- <layer name="Tile Layer 1" width="15" height="10">
+ <tileset firstgid="9" source="NewDungeon.tsx"/>
+ <tileset firstgid="37" source="Gameplay.tsx"/>
+ <layer name="Tile Background" width="15" height="10">
   <data encoding="base64" compression="zlib">
-   eJxjYWBgYKECJgbg04tPnN56iZEnxk/ofscFqO0uSuKJGmkBhAEL1gG5
+   eJyVkVEKwDAIQ/1VdwV3/2O2AwNSNHQfj1hFazBEJJL3ghh4Np5a409to6R3qnmZzf7t8nboNJ95ssY7Yj3qXa/mftgBb+SseOx8M8/TfZhf7IW7AC0x6/3DAt4MDjo=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

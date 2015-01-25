@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="5" height="11" tilewidth="40" tileheight="40" nextobjectid="56">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="5" height="11" tilewidth="40" tileheight="40" nextobjectid="60">
  <properties>
   <property name="unity:scale" value="0.025"/>
  </properties>
- <tileset firstgid="1" source="Dungeon.tsx"/>
- <layer name="Tile Layer 1" width="5" height="11">
+ <tileset firstgid="1" source="NewDungeon.tsx"/>
+ <tileset firstgid="29" source="Gameplay.tsx"/>
+ <layer name="Tile Background" width="5" height="11">
+  <properties>
+   <property name="unity:sortingLayerName" value="Background"/>
+  </properties>
   <data encoding="base64" compression="zlib">
-   eJxjZGBgYMSBGYgQQwYDLYaOAQ/0ACE=
+   eJwTZWBgEAViMSiNjBnR+GJQMWS1LEgYJsaMhGFiTHjEGNHMQxfDpg6beegYAFdrAt8=
   </data>
  </layer>
- <objectgroup name="Placeables">
-  <object id="53" gid="7" x="80" y="160"/>
-  <object id="54" gid="7" x="80" y="240"/>
-  <object id="55" gid="4" x="80" y="80"/>
+ <layer name="Tile Decoration" width="5" height="11">
+  <properties>
+   <property name="unity:sortingLayerName" value="Background"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYMANxPHIDQUAABIcABg=
+  </data>
+ </layer>
+ <objectgroup name="Gameplay">
+  <object id="56" gid="34" x="80" y="160"/>
+  <object id="57" gid="34" x="80" y="240"/>
+  <object id="59" gid="33" x="80" y="80"/>
  </objectgroup>
+ <layer name="Tile Foreground" width="5" height="11">
+  <properties>
+   <property name="unity:sortingLayerName" value="Foreground"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBiaQBIJ4wIACjwATA==
+  </data>
+ </layer>
 </map>
