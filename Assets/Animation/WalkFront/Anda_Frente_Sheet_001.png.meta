@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: a48a2f479ab131b4dacac3b2e3acd501
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Anda_Frente_Sheet_001_0
+    21300002: Anda_Frente_Sheet_001_1
+    21300004: Anda_Frente_Sheet_001_2
+    21300006: Anda_Frente_Sheet_001_3
+    21300008: Anda_Frente_Sheet_001_4
+    21300010: Anda_Frente_Sheet_001_5
+    21300012: Anda_Frente_Sheet_001_6
+    21300014: Anda_Frente_Sheet_001_7
+    21300016: Anda_Frente_Sheet_001_8
+    21300018: Anda_Frente_Sheet_001_9
+    21300020: Anda_Frente_Sheet_001_10
+    21300022: Anda_Frente_Sheet_001_11
+    21300024: Anda_Frente_Sheet_001_12
+    21300026: Anda_Frente_Sheet_001_13
+    21300028: Anda_Frente_Sheet_001_14
+    21300030: Anda_Frente_Sheet_001_15
+    21300032: Anda_Frente_Sheet_001_16
+    21300034: Anda_Frente_Sheet_001_17
+    21300036: Anda_Frente_Sheet_001_18
+    21300038: Anda_Frente_Sheet_001_19
+    21300040: Anda_Frente_Sheet_001_20
+    21300042: Anda_Frente_Sheet_001_21
+    21300044: Anda_Frente_Sheet_001_22
+    21300046: Anda_Frente_Sheet_001_23
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Anda_Frente_Sheet_001_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 315
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 315
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 315
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 315
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 253
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 253
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 253
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 253
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 191
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_9
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 191
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 191
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_11
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 191
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 129
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_13
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 129
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 129
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_15
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 129
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_17
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 67
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_18
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 67
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_19
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 67
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_21
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 5
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_22
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 5
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Anda_Frente_Sheet_001_23
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 5
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

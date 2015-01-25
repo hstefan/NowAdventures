@@ -40,6 +40,10 @@ public class PlayerController : MonoBehaviour
         new_direction = PlayerDirection.None;
         equippedItem = PlayerItem.None;
         anim = GetComponent<Animator>();
+
+        anim.SetFloat("DirX", 0f);
+        anim.SetFloat("DirY", 1f);
+        anim.SetFloat("Speed", 0f);
     }
 
     void Start()
@@ -138,6 +142,7 @@ public class PlayerController : MonoBehaviour
                     {
                         direction = PlayerDirection.None;
                         new_direction = PlayerDirection.None;
+                        anim.SetFloat("Speed", 0f);
                     }
                 }
                 else
