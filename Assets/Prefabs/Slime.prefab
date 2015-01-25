@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11436096}
   - 61: {fileID: 6136096}
   - 50: {fileID: 5036096}
+  - 95: {fileID: 9540354}
   m_Layer: 10
   m_Name: Slime
   m_TagString: slime
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -5.5, z: 0}
+  m_LocalPosition: {x: 6.5, y: -5.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +58,22 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
-  m_Center: {x: 0, y: 0}
+  m_Center: {x: 0, y: -.275000006}
+--- !u!95 &9540354
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136096}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e252f4b1c701df44b9466e05ffef0248, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11436094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,9 +85,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffccfabce9f09c2468c19147284603b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileX: 2
+  TileX: 6
   TileY: -6
-  BaseOffset: {x: .5, y: .5, z: 0}
+  BaseOffset: {x: .5, y: .75, z: 0}
 --- !u!114 &11436096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,7 +119,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2c9a710c5e67a1746a446dc814dfd7b9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08c7bd22f0425014ab563b1ce1f91d59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
