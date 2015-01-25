@@ -3050,6 +3050,7 @@ GameObject:
   - 114: {fileID: 1421829529}
   - 61: {fileID: 1421829528}
   - 50: {fileID: 1421829527}
+  - 114: {fileID: 1421829530}
   m_Layer: 10
   m_Name: InvisibleExitSmall
   m_TagString: exit_door
@@ -3112,6 +3113,19 @@ MonoBehaviour:
   TileX: 6
   TileY: -2
   BaseOffset: {x: .5, y: .5, z: 0}
+--- !u!114 &1421829530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1421829525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782a0dca03daf9e4e9c56ed6cab0d1cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1.5
+  nextScene: Level3
 --- !u!1 &1447836187
 GameObject:
   m_ObjectHideFlags: 0

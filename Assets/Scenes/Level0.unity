@@ -1620,6 +1620,7 @@ GameObject:
   - 114: {fileID: 751987173}
   - 61: {fileID: 751987171}
   - 50: {fileID: 751987170}
+  - 114: {fileID: 751987172}
   m_Layer: 10
   m_Name: InvisibleExitSmall
   m_TagString: exit_door
@@ -1667,6 +1668,19 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!114 &751987172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 751987168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782a0dca03daf9e4e9c56ed6cab0d1cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1.5
+  nextScene: Level2
 --- !u!114 &751987173
 MonoBehaviour:
   m_ObjectHideFlags: 0
