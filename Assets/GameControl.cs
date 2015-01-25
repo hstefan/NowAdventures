@@ -11,12 +11,11 @@ public class GameControl : MonoBehaviour {
         Instance = this;
     }
 
-    public void CheckGameOver(PlayerController dying_player)
+    public void CheckGameOver()
     {
         PlayerController[] players = FindObjectsOfType<PlayerController>();
         bool active_player = false;
         foreach (PlayerController p in players) {
-            if (p == dying_player) continue;
             if (p.controllable || p.direction != PlayerDirection.None)
             {
                 active_player = true;

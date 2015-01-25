@@ -18,13 +18,14 @@ public enum PlayerItem
 public class PlayerController : MonoBehaviour
 {
     private TiledCharacter tiled;
+    private Animator anim;
 
     [SerializeField]
     private float moveDuration;
     [SerializeField]
     private float moveInterval;
 
-    [SerializeField, HideInInspector]
+    [System.NonSerialized]
     public PlayerDirection direction;
     private PlayerDirection new_direction;
     [SerializeField, HideInInspector]
@@ -32,15 +33,15 @@ public class PlayerController : MonoBehaviour
 
     [System.NonSerialized]
     public bool controllable;
-    private Animator anim;
 
     void Awake()
     {
         tiled = GetComponent<TiledCharacter>();
+        anim = GetComponent<Animator>();
+
         direction = PlayerDirection.None;
         new_direction = PlayerDirection.None;
         equippedItem = PlayerItem.None;
-        anim = GetComponent<Animator>();
 
         anim.SetFloat("DirX", 0f);
         anim.SetFloat("DirY", 1f);
@@ -96,84 +97,126 @@ public class PlayerController : MonoBehaviour
         {
             if (new_direction == ReverseDirection(direction))
             {
-                new_direction = direction;
+                new_direction = PlayerDirection.None;
             }
 
             float move_interval = equippedItem == PlayerItem.Boots ? moveInterval * 0.5f : moveInterval;
             float move_duration = equippedItem == PlayerItem.Boots ? move_interval : moveDuration;
 
-            if (direction != new_direction)
+            int new_x = -1;
+            int new_y = -1;
+            bool moved = false;
+            bool blocked = true;
+
+            if (new_direction != PlayerDirection.None)
             {
-                if (direction != PlayerDirection.None)
+                TryToMoveInDirection(new_direction, move_duration, out blocked, out moved, out new_x, out new_y);
+
+                if (blocked)
                 {
-                    // Split player
-                    GameObject new_player_go = (GameObject) Instantiate(gameObject);
-                    var player_controller = new_player_go.GetComponent<PlayerController>();
-                    player_controller.new_direction = direction;
-                    player_controller.direction = PlayerDirection.None;
-                    player_controller.equippedItem = equippedItem;
+                    // Ignore keypress
+                    new_direction = PlayerDirection.None;
+                }
+                else if (moved)
+                {
+                    if (direction != PlayerDirection.None)
+                    {
+                        // Split player
+                        GameObject new_player_go = (GameObject)Instantiate(gameObject);
+                        var player_controller = new_player_go.GetComponent<PlayerController>();
+                        player_controller.new_direction = direction;
+                        player_controller.direction = PlayerDirection.None;
+                        player_controller.equippedItem = equippedItem;
+                    }
                 }
             }
-            direction = new_direction;
-            if (direction != PlayerDirection.None)
-            {
-                int x = tiled.TileX;
-                int y = tiled.TileY;
-                Vector2 dir = Vector2.zero;
-                switch (direction)
-                {
-                    case PlayerDirection.Up:
-                        y += 1;
-                        dir = Vector2.up;
-                        break;
-                    case PlayerDirection.Down:
-                        y -= 1;
-                        dir = -Vector2.up;
-                        break;
-                    case PlayerDirection.Left:
-                        x -= 1;
-                        dir = -Vector2.right;
-                        break;
-                    case PlayerDirection.Right:
-                        x += 1;
-                        dir = Vector2.right;
-                        break;
-                    default: break;
-                }
 
-                Collider2D coll = tiled.CollideWithBlocker(dir);
-                if (coll != null)
-                {
-                    if (coll.CompareTag("crate"))
-                    {
-                        Crate crate = coll.GetComponent<Crate>();
-                        if (equippedItem == PlayerItem.PowerGloves && crate.CanMove(direction))
-                        {
-                            crate.Push(direction, move_duration * 0.75f);
-                        }
-                        else
-                        {
-                            direction = PlayerDirection.None;
-                            new_direction = PlayerDirection.None;
-                            GameControl.Instance.CheckGameOver(this);
-                            anim.SetFloat("Speed", 0f);
-                        }
-                    }
-                    else
-                    {
-                        direction = PlayerDirection.None;
-                        new_direction = PlayerDirection.None;
-                        GameControl.Instance.CheckGameOver(this);
-                        anim.SetFloat("Speed", 0f);
-                    }
-                }
-                else
-                {
-                    tiled.MoveToTile(x, y, move_duration);
-                }
+            if (new_direction == PlayerDirection.None)
+            {
+                TryToMoveInDirection(direction, move_duration, out blocked, out moved, out new_x, out new_y);
+            }
+
+            if (blocked)
+            {
+                direction = PlayerDirection.None;
+                GameControl.Instance.CheckGameOver();
+                anim.SetFloat("Speed", 0f);
+            }
+            else if (moved)
+            {
+                tiled.MoveToTile(new_x, new_y, move_duration);
+            }
+
+            if (new_direction != PlayerDirection.None)
+            {
+                direction = new_direction;
+                new_direction = PlayerDirection.None;
             }
 
             yield return new WaitForSeconds(move_interval);
+        }
+    }
+
+    private void TryToMoveInDirection(PlayerDirection new_dir, float move_duration, out bool blocked, out bool moved, out int out_x, out int out_y)
+    {
+        int x = tiled.TileX;
+        int y = tiled.TileY;
+        Vector2 vdir = Vector2.zero;
+        switch (new_dir)
+        {
+            case PlayerDirection.Up:
+                y += 1;
+                vdir = Vector2.up;
+                break;
+            case PlayerDirection.Down:
+                y -= 1;
+                vdir = -Vector2.up;
+                break;
+            case PlayerDirection.Left:
+                x -= 1;
+                vdir = -Vector2.right;
+                break;
+            case PlayerDirection.Right:
+                x += 1;
+                vdir = Vector2.right;
+                break;
+            default: break;
+        }
+
+        Collider2D coll = tiled.CollideWithBlocker(vdir);
+        if (coll != null)
+        {
+            if (coll.CompareTag("crate"))
+            {
+                Crate crate = coll.GetComponent<Crate>();
+                if (equippedItem == PlayerItem.PowerGloves && crate.CanMove(new_direction))
+                {
+                    Debug.Log("PUSHED!");
+                    crate.Push(new_dir, move_duration * 0.75f);
+                    out_x = out_y = -1;
+                    moved = false;
+                    blocked = false;
+                }
+                else
+                {
+                    out_x = out_y = -1;
+                    moved = false;
+                    blocked = true;
+                }
+            }
+            else
+            {
+                out_x = out_y = -1;
+                moved = false;
+                blocked = true;
+            }
+        }
+        else
+        {
+            out_x = x;
+            out_y = y;
+            moved = true;
+            blocked = false;
         }
     }
 
@@ -188,25 +231,28 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
-                GameControl.Instance.CheckGameOver(this);
+                die();
             }
         }
         else if (other.CompareTag("exit_door"))
         {
-            Destroy(gameObject);
-            GameControl.Instance.CheckGameOver(this);
+            die();
         }
         else if (other.CompareTag("hole"))
         {
-            Destroy(gameObject);
-            GameControl.Instance.CheckGameOver(this);
+            die();
         }
         else if (other.CompareTag("arrow"))
         {
-            Destroy(gameObject);
-            GameControl.Instance.CheckGameOver(this);
+            die();
             other.SendMessage("ResetPosition");
         }
+    }
+
+    private void die()
+    {
+        controllable = false;
+        Destroy(gameObject);
+        GameControl.Instance.CheckGameOver();
     }
 }
