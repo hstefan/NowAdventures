@@ -25,12 +25,13 @@ public class PlayerController : MonoBehaviour
     private float moveInterval;
 
     [SerializeField, HideInInspector]
-    private PlayerDirection direction;
+    public PlayerDirection direction;
     private PlayerDirection new_direction;
     [SerializeField, HideInInspector]
     public PlayerItem equippedItem;
 
-    private bool controllable;
+    [System.NonSerialized]
+    public bool controllable;
     private Animator anim;
 
     void Awake()
@@ -136,12 +137,15 @@ public class PlayerController : MonoBehaviour
                         {
                             direction = PlayerDirection.None;
                             new_direction = PlayerDirection.None;
+                            GameControl.Instance.CheckGameOver(this);
+                            anim.SetFloat("Speed", 0f);
                         }
                     }
                     else
                     {
                         direction = PlayerDirection.None;
                         new_direction = PlayerDirection.None;
+                        GameControl.Instance.CheckGameOver(this);
                         anim.SetFloat("Speed", 0f);
                     }
                 }
@@ -166,24 +170,24 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                if (controllable) GameControl.Instance.GameOver();
                 Destroy(gameObject);
+                GameControl.Instance.CheckGameOver(this);
             }
         }
         else if (other.CompareTag("exit_door"))
         {
-            if (controllable) GameControl.Instance.GameOver();
             Destroy(gameObject);
+            GameControl.Instance.CheckGameOver(this);
         }
         else if (other.CompareTag("hole"))
         {
-            if (controllable) GameControl.Instance.GameOver();
             Destroy(gameObject);
+            GameControl.Instance.CheckGameOver(this);
         }
         else if (other.CompareTag("arrow"))
         {
-            if (controllable) GameControl.Instance.GameOver();
             Destroy(gameObject);
+            GameControl.Instance.CheckGameOver(this);
             other.SendMessage("ResetPosition");
         }
     }

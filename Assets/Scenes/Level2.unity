@@ -1242,6 +1242,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11411970, guid: b1e1c190663f0654fa96fd0d34c4f243, type: 2}
+      propertyPath: Respawning
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411974, guid: b1e1c190663f0654fa96fd0d34c4f243, type: 2}
+      propertyPath: Respawning
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1e1c190663f0654fa96fd0d34c4f243, type: 2}
   m_RootGameObject: {fileID: 887303269}
@@ -1339,7 +1347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveDuration: .185000002
-  Respawning: 0
+  Respawning: 1
 --- !u!50 &994783457
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1853,7 +1861,7 @@ Animator:
   m_GameObject: {fileID: 1297154007}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c26beaa12b3076c409bf710ed87b32b6, type: 2}
+  m_Controller: {fileID: 9100000, guid: d00ee48295f35434a9d3ee0621877d98, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -3063,7 +3071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveDuration: .185000002
-  Respawning: 0
+  Respawning: 1
 --- !u!50 &1960117341
 Rigidbody2D:
   m_ObjectHideFlags: 0

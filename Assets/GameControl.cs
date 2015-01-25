@@ -11,9 +11,30 @@ public class GameControl : MonoBehaviour {
         Instance = this;
     }
 
-    public void GameOver() {
+    public void CheckGameOver(PlayerController dying_player)
+    {
+        PlayerController[] players = FindObjectsOfType<PlayerController>();
+        bool active_player = false;
+        foreach (PlayerController p in players) {
+            if (p == dying_player) continue;
+            if (p.controllable || p.direction != PlayerDirection.None)
+            {
+                active_player = true;
+                break;
+            }
+        }
+
+        if (!active_player)
+        {
+            GameOver();
+        }
+    }
+
+    public void GameOver()
+    {
         GameOverScreen.gameObject.SetActive(true);
     }
+
     public void RestartGame() {
         Application.LoadLevel(Application.loadedLevel);
         GameOverScreen.gameObject.SetActive(false);
