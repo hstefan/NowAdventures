@@ -83,6 +83,8 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1)) { equipItem(PlayerItem.Sword); }
             if (Input.GetKeyDown(KeyCode.Alpha2)) { equipItem(PlayerItem.Boots); }
             if (Input.GetKeyDown(KeyCode.Alpha3)) { equipItem(PlayerItem.PowerGloves); }
+
+            if (Input.GetKeyDown(KeyCode.R)) { GameControl.Instance.RestartGame(); }
         }
     }
 
