@@ -642,7 +642,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.5
+  orthographic size: 5.30000019
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -661,7 +661,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 542254474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: -6.5, z: -10}
+  m_LocalPosition: {x: 7, y: -5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1937,6 +1937,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11433710, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
+      propertyPath: usesPerItem.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 433710, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.5
@@ -1976,6 +1980,38 @@ Prefab:
     - target: {fileID: 11433712, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
       propertyPath: TileX
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433710, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
+      propertyPath: usesPerItem.Array.data[0].Item
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433710, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
+      propertyPath: usesPerItem.Array.data[1].Item
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433710, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
+      propertyPath: usesPerItem.Array.data[2].Item
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433710, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
+      propertyPath: usesPerItem.Array.data[3].Item
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433710, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
+      propertyPath: usesPerItem.Array.data[0].Uses
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433710, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
+      propertyPath: usesPerItem.Array.data[1].Uses
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433710, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
+      propertyPath: usesPerItem.Array.data[2].Uses
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433710, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
+      propertyPath: usesPerItem.Array.data[3].Uses
+      value: 999999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
@@ -2699,6 +2735,15 @@ MonoBehaviour:
   moveDuration: .349999994
   moveInterval: .349999994
   equippedItem: 0
+  usesPerItem:
+  - Item: 1
+    Uses: 2
+  - Item: 2
+    Uses: 3
+  - Item: 3
+    Uses: 2
+  - Item: 0
+    Uses: 999999
 --- !u!114 &1946834538
 MonoBehaviour:
   m_ObjectHideFlags: 0

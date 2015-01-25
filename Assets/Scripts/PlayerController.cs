@@ -14,6 +14,12 @@ public enum PlayerItem
     PowerGloves
 }
 
+[System.Serializable]
+public class ItemUses {
+    public PlayerItem Item;
+    public int Uses;
+}
+
 [RequireComponent(typeof(TiledCharacter))]
 public class PlayerController : MonoBehaviour
 {
@@ -30,6 +36,8 @@ public class PlayerController : MonoBehaviour
     private PlayerDirection new_direction;
     [SerializeField, HideInInspector]
     public PlayerItem equippedItem;
+    [SerializeField]
+    private ItemUses[] usesPerItem;
 
     [System.NonSerialized]
     public bool controllable;
@@ -71,9 +79,9 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.LeftArrow)) { new_direction = PlayerDirection.Left; }
             if (Input.GetKeyDown(KeyCode.RightArrow)) { new_direction = PlayerDirection.Right; }
 
-            if (Input.GetKeyDown(KeyCode.Alpha1)) { equippedItem = PlayerItem.Sword; }
-            if (Input.GetKeyDown(KeyCode.Alpha2)) { equippedItem = PlayerItem.Boots; }
-            if (Input.GetKeyDown(KeyCode.Alpha3)) { equippedItem = PlayerItem.PowerGloves; }
+            if (Input.GetKeyDown(KeyCode.Alpha1)) { equipItem(PlayerItem.Sword); }
+            if (Input.GetKeyDown(KeyCode.Alpha2)) { equipItem(PlayerItem.Boots); }
+            if (Input.GetKeyDown(KeyCode.Alpha3)) { equipItem(PlayerItem.PowerGloves); }
         }
     }
 
@@ -87,6 +95,14 @@ public class PlayerController : MonoBehaviour
             case PlayerDirection.Up: return PlayerDirection.Down;
             case PlayerDirection.Down: return PlayerDirection.Up;
             default: return PlayerDirection.None;
+        }
+    }
+
+    private void equipItem(PlayerItem item) {
+        var usedata = System.Array.Find<ItemUses>(usesPerItem, i => i.Item == item);
+        if (usedata.Uses > 0) {
+            usedata.Uses--;
+            equippedItem = item;
         }
     }
 
