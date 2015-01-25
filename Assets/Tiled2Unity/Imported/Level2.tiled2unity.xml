@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 1/25/2015 2:20:53 PM-->
+<!--Last exported: 1/25/2015 3:10:07 PM-->
 <Tiled2Unity version="0.9.7.4">
   <AssignMaterial mesh="mesh_[00]_[20]" material="Parede" sortingLayerName="Background" sortingOrder="0" />
   <AssignMaterial mesh="mesh_[00]_[21]" material="Paredes1xT" sortingLayerName="Background" sortingOrder="0" />
@@ -16,7 +16,7 @@
   <AssignMaterial mesh="mesh_[01]_[27]" material="Besta_Top_001" sortingLayerName="Background" sortingOrder="1" />
   <AssignMaterial mesh="mesh_[02]_[24]" material="ParedesSuperior" sortingLayerName="Foreground" sortingOrder="2" />
   <Prefab name="Level2" numTilesWide="9" numTilesHigh="13" tileWidth="40" tileHeight="40" scale="0.025">
-    <GameObject name="Tile_Layer_2_00">
+    <GameObject name="Tile_Background_00">
       <GameObject copy="mesh_[00]_[20]" />
       <GameObject copy="mesh_[00]_[21]" />
       <GameObject copy="mesh_[00]_[00]" />

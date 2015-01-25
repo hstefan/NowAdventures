@@ -4,6 +4,9 @@ using System.Collections;
 [RequireComponent(typeof(TiledCharacter))]
 public class Crate : MonoBehaviour
 {
+    [SerializeField]
+    private Sprite fellSprite;
+
     private TiledCharacter tiled;
     private bool locked;
 
@@ -43,9 +46,7 @@ public class Crate : MonoBehaviour
         {
             Destroy(other.gameObject);
             locked = true;
-            Color col = renderer.material.color;
-            col.a = 0.5f;
-            renderer.material.color = col;
+            GetComponent<SpriteRenderer>().sprite = fellSprite;
             Destroy(collider2D);
         }
     }

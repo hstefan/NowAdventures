@@ -214,6 +214,7 @@ public class PlayerController : MonoBehaviour
             default: break;
         }
 
+        anim.SetBool("Pushing", false);
         Collider2D coll = tiled.CollideWithBlocker(vdir);
         if (coll != null)
         {
@@ -233,7 +234,6 @@ public class PlayerController : MonoBehaviour
                     out_x = out_y = -1;
                     moved = false;
                     blocked = true;
-                    anim.SetBool("Pushing", false);
                 }
             }
             else
