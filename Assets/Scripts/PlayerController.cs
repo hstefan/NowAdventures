@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
         direction = PlayerDirection.None;
         new_direction = PlayerDirection.None;
         equippedItem = PlayerItem.None;
+        controllable = true;
 
         anim.SetFloat("DirX", 0f);
         anim.SetFloat("DirY", 1f);
@@ -50,9 +51,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        bool first_player = FindObjectsOfType(typeof(PlayerController)).Length <= 1;
-        controllable = first_player;
-
         if (!controllable)
         {
             SpriteRenderer renderer = GetComponent<SpriteRenderer>();
@@ -127,6 +125,7 @@ public class PlayerController : MonoBehaviour
                         player_controller.new_direction = direction;
                         player_controller.direction = PlayerDirection.None;
                         player_controller.equippedItem = equippedItem;
+                        player_controller.controllable = false;
                     }
                 }
             }
@@ -254,7 +253,9 @@ public class PlayerController : MonoBehaviour
     private void die()
     {
         controllable = false;
+        new_direction = PlayerDirection.None;
         anim.SetTrigger("Dying");
+        gameObject.tag = null;
         StartCoroutine(WaitAndDie(2f));
     }
 
