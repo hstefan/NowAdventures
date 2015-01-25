@@ -78,9 +78,27 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    static PlayerDirection ReverseDirection(PlayerDirection dir)
+    {
+        switch (dir)
+        {
+            case PlayerDirection.None: return PlayerDirection.None;
+            case PlayerDirection.Left: return PlayerDirection.Right;
+            case PlayerDirection.Right: return PlayerDirection.Left;
+            case PlayerDirection.Up: return PlayerDirection.Down;
+            case PlayerDirection.Down: return PlayerDirection.Up;
+            default: return PlayerDirection.None;
+        }
+    }
+
     private IEnumerator movementLoop() {
         while (true)
         {
+            if (new_direction == ReverseDirection(direction))
+            {
+                new_direction = direction;
+            }
+
             float move_interval = equippedItem == PlayerItem.Boots ? moveInterval * 0.5f : moveInterval;
             float move_duration = equippedItem == PlayerItem.Boots ? move_interval : moveDuration;
 
