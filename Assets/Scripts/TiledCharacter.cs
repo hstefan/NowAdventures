@@ -33,7 +33,7 @@ public class TiledCharacter : MonoBehaviour {
         }
         else
         {
-            transform.position = getPositionForTile(TileX, TileY);
+            if (mapOrigin != null) transform.position = getPositionForTile(TileX, TileY);
         }
     }
 #endif
