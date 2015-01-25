@@ -191,7 +191,6 @@ public class PlayerController : MonoBehaviour
                 Crate crate = coll.GetComponent<Crate>();
                 if (equippedItem == PlayerItem.PowerGloves && crate.CanMove(new_direction))
                 {
-                    Debug.Log("PUSHED!");
                     crate.Push(new_dir, move_duration * 0.75f);
                     out_x = out_y = -1;
                     moved = false;
