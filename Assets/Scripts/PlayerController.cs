@@ -231,6 +231,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                anim.SetFloat("DeathType", 0f);
                 die();
             }
         }
@@ -240,10 +241,12 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.CompareTag("hole"))
         {
+            anim.SetFloat("DeathType", 1f);
             die();
         }
         else if (other.CompareTag("arrow"))
         {
+            anim.SetFloat("DeathType", 0f);
             die();
             other.SendMessage("ResetPosition");
         }
@@ -252,6 +255,12 @@ public class PlayerController : MonoBehaviour
     private void die()
     {
         controllable = false;
+        anim.SetTrigger("Dying");
+        StartCoroutine(WaitAndDie(2f));
+    }
+
+    private IEnumerator WaitAndDie(float t) {
+        yield return new WaitForSeconds(t);
         Destroy(gameObject);
         GameControl.Instance.CheckGameOver();
     }
