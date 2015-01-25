@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="18" tilewidth="40" tileheight="40" nextobjectid="4">
+ <tileset firstgid="1" name="Tiles" tilewidth="40" tileheight="40">
+  <tile id="0">
+   <image width="40" height="40" source="Attack_001.jpg"/>
+  </tile>
+  <tile id="1">
+   <image width="40" height="40" source="Exit_001.jpg"/>
+  </tile>
+  <tile id="2">
+   <image width="40" height="40" source="Ground_001.jpg"/>
+  </tile>
+  <tile id="3">
+   <image width="40" height="40" source="Sky_001.jpg"/>
+  </tile>
+  <tile id="4">
+   <image width="40" height="40" source="Snow_001.jpg"/>
+  </tile>
+  <tile id="5">
+   <image width="40" height="40" source="Start_001.jpg"/>
+  </tile>
+  <tile id="6">
+   <image width="40" height="40" source="Trees_001.jpg"/>
+  </tile>
+ </tileset>
+ <layer name="Tiles" width="32" height="18">
+  <data encoding="base64" compression="zlib">
+   eJzt0LEKACAIRVEp/f9fbqklUhvSR+Bwt+g8ZCLiqqq+TMD2CuV30AY5+FkbBOiL40du2B3Nj9qg+Rk3sOzoG3i25r/YoP3bZmS8udkwABunCTs=
+  </data>
+ </layer>
+ <objectgroup name="Boundaries">
+  <properties>
+   <property name="unity:layers" value="Blockers"/>
+  </properties>
+  <object id="2" x="640" y="360">
+   <polyline points="0,0 0,240 -40,240 -40,280 -80,280 -80,320 -80,360 -40,360 0,360 40,360 40,320 80,320 80,280 80,160 40,160 40,0 0,0"/>
+  </object>
+  <object id="3" x="2" y="0">
+   <polyline points="0,0 1278,0 1278,720 -2,720 -2,0"/>
+  </object>
+ </objectgroup>
+ <layer name="Catchables" width="32" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgYCMS0woMtP2jYBSMgqEJmAbaAaNgwAHzQDtgFNAdUKtdAAAs6ACQ
+  </data>
+ </layer>
+</map>

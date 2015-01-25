@@ -106,6 +106,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void addItem(PlayerItem item) {
+        var usedata = System.Array.Find<ItemUses>(usesPerItem, i => i.Item == item);
+        usedata.Uses++;
+        Debug.Log(usedata.Uses);
+    }
+
     private IEnumerator movementLoop() {
         while (true)
         {

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="18" tilewidth="40" tileheight="40" nextobjectid="23">
+ <properties>
+  <property name="unity:scale" value="0.025"/>
+ </properties>
+ <tileset firstgid="1" name="Default" tilewidth="50" tileheight="149">
+  <tile id="0">
+   <image width="47" height="69" source="../../Assets/Sprites/Bandeira_Arma_001.png"/>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="AddComp" value="Blocker"/>
+   </properties>
+   <image width="50" height="149" source="../../Assets/Sprites/Bloqueio_001.png"/>
+  </tile>
+  <tile id="2">
+   <image width="40" height="40" source="../../Assets/Sprites/exit_door.png"/>
+  </tile>
+ </tileset>
+ <objectgroup name="Boundaries">
+  <properties>
+   <property name="unity:layer" value="Blockers"/>
+  </properties>
+  <object id="11" x="0" y="0">
+   <polyline points="0,0 1278.67,-1.33333 1278.67,718.667 -1.33333,718.667 -1.33333,1.33333"/>
+  </object>
+  <object id="14" x="959.333" y="159.333">
+   <polyline points="0,0 -39.3333,0.666667 -39.3333,40.6667 -79.3333,40.6667 -79.3333,80.6667 -279.333,80.6667 -279.333,40.6667 -559.333,40.6667 -559.333,80.6667 -679.333,80.6667 -679.333,120.667 -719.333,120.667 -719.333,200.667 -759.333,200.667 -759.333,280.667 -799.333,280.667 -799.333,120.667 -919.333,120.667 -919.333,360.667 -719.333,360.667 -719.333,440.667 -679.333,440.667 -679.333,480.667 -279.333,480.667 -279.333,560.667 -159.333,560.667 -159.333,400.667 -199.333,400.667 -199.333,360.667 -559.333,360.667 -559.333,320.667 -599.333,320.667 -599.333,200.667 -559.333,200.667 -559.333,160.667 -279.333,160.667 -279.333,200.667 40.6667,200.667 40.6667,160.667 80.6667,160.667 80.6667,120.667 120.667,120.667 120.667,-159.333 0.666667,-159.333 0.666667,0.666667"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="Object Layer 2">
+  <object id="16" gid="2" x="840" y="320"/>
+  <object id="18" gid="1" x="80" y="320">
+   <properties>
+    <property name="AddComp" value="PickableSword"/>
+   </properties>
+  </object>
+  <object id="22" gid="3" x="1000" y="40">
+   <properties>
+    <property name="AddComp" value="InvisibleExit"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

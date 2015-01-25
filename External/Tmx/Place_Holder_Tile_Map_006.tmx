@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="18" tilewidth="40" tileheight="40" nextobjectid="3">
+ <tileset firstgid="1" name="Tiles" tilewidth="40" tileheight="40">
+  <tile id="0">
+   <image width="40" height="40" source="Attack_001.jpg"/>
+  </tile>
+  <tile id="1">
+   <image width="40" height="40" source="Box_001.jpg"/>
+  </tile>
+  <tile id="2">
+   <image width="40" height="40" source="Exit_001.jpg"/>
+  </tile>
+  <tile id="3">
+   <image width="40" height="40" source="Gatilho_Flecha_001.jpg"/>
+  </tile>
+  <tile id="4">
+   <image width="40" height="40" source="Ground_001.jpg"/>
+  </tile>
+  <tile id="5">
+   <image width="40" height="40" source="Single_Tile_001.jpg"/>
+  </tile>
+  <tile id="6">
+   <image width="40" height="40" source="Sky_001.jpg"/>
+  </tile>
+  <tile id="7">
+   <image width="40" height="40" source="Snow_001.jpg"/>
+  </tile>
+  <tile id="8">
+   <image width="40" height="40" source="Speed_001.jpg"/>
+  </tile>
+  <tile id="9">
+   <image width="40" height="40" source="Start_001.jpg"/>
+  </tile>
+  <tile id="10">
+   <image width="40" height="40" source="Trees_001.jpg"/>
+  </tile>
+ </tileset>
+ <layer name="Tiles" width="32" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjY2BgYBtgPFBg1P6hYz8HELMiYWQ+PexnxYMHwn4mOtuPzT2UgqFuPwwzkukeavmf3HQwaj/59nMhsTmh9jPT0X5qgMFi/0BiAMu7AxQ=
+  </data>
+ </layer>
+ <objectgroup name="Boundaries">
+  <object id="2" x="400" y="200">
+   <polyline points="0,0 280,0 280,120 200,120 200,200 360,200 360,360 400,360 400,400 280,400 280,240 200,240 200,400 160,400 160,120 0,120 0,0"/>
+  </object>
+ </objectgroup>
+ <layer name="Catchables" width="32" height="18">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAfBkJAAAB
+  </data>
+ </layer>
+</map>

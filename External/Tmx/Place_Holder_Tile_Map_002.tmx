@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="18" tilewidth="40" tileheight="40" nextobjectid="4">
+ <tileset firstgid="1" name="Tiles" tilewidth="40" tileheight="40">
+  <tile id="0">
+   <image width="40" height="40" source="Attack_001.jpg"/>
+  </tile>
+  <tile id="1">
+   <image width="40" height="40" source="Exit_001.jpg"/>
+  </tile>
+  <tile id="2">
+   <image width="40" height="40" source="Ground_001.jpg"/>
+  </tile>
+  <tile id="3">
+   <image width="40" height="40" source="Snow_001.jpg"/>
+  </tile>
+  <tile id="4">
+   <image width="40" height="40" source="Start_001.jpg"/>
+  </tile>
+  <tile id="5">
+   <image width="40" height="40" source="Trees_001.jpg"/>
+  </tile>
+  <tile id="6">
+   <image width="40" height="40" source="../Arte/BGS/Tiles/BG_ground_rock_001.png"/>
+  </tile>
+  <tile id="7">
+   <image width="40" height="40" source="Sky_001.jpg"/>
+  </tile>
+  <tile id="8">
+   <image width="40" height="40" source="Single_Tile_001.jpg"/>
+  </tile>
+  <tile id="9">
+   <image width="40" height="40" source="Speed_001.jpg"/>
+  </tile>
+ </tileset>
+ <layer name="Tiles" width="32" height="18">
+  <data encoding="base64" compression="zlib">
+   eJzdj0EKwCAMBAOC2P9/2JMQQhI3MbbQgT1VnekgogGO09g00DczbsRf2aDxlt8C8Z82eKD+bMeOqD/acMOPNiA8bFFO3Y3y/+81oPzBLxsiVPlXQwbZYO0maIPX0T9s6Mqqsfyae9dinfHuST/irRz3a98n56MGjA==
+  </data>
+ </layer>
+ <objectgroup name="Boundaries">
+  <properties>
+   <property name="unity:layers" value="Blockers"/>
+  </properties>
+  <object id="1" x="2" y="0">
+   <polyline points="0,0 1278,0 1278,720 -2,720 -2,0"/>
+  </object>
+  <object id="2" x="1078" y="722">
+   <polyline points="0,0 -120,-2 -118,-122 -438,-122 -438,-162 -478,-162 -478,-202 -518,-202 -518,-242 -558,-242 -558,-402 -518,-402 -518,-522 -518,-602 -518,-722 -398,-722 -398,-602 -398,-402 -398,-362 -398,-322 -398,-282 -398,-242 -358,-242 -238,-242 -118,-242 -118,-202 -78,-202 -38,-202 -38,-162 2,-162 2,-2"/>
+  </object>
+ </objectgroup>
+ <layer name="Catchables" width="32" height="18">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgYCUSIwMmJEwpIMf+UTAKRsEoGAWjAAS4BtoBo2BQAkLtBwC4AQCE
+  </data>
+ </layer>
+</map>
