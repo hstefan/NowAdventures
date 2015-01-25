@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
         controllable = true;
 
         anim.SetFloat("DirX", 0f);
-        anim.SetFloat("DirY", 1f);
+        anim.SetFloat("DirY", 0f);
         anim.SetFloat("Speed", 0f);
     }
 
@@ -143,6 +143,15 @@ public class PlayerController : MonoBehaviour
             }
             else if (moved)
             {
+                if (anim != null) {
+                    anim.SetFloat("DirX", new_x - tiled.TileX);
+                    anim.SetFloat("DirY", new_y - tiled.TileY);
+                    var spd = 1f;
+                    if (equippedItem == PlayerItem.Boots) {
+                        spd = spd * 2f;
+                    }
+                    anim.SetFloat("Speed", spd);
+                }
                 tiled.MoveToTile(new_x, new_y, move_duration);
             }
 

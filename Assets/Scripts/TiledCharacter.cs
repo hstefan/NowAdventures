@@ -70,21 +70,11 @@ public class TiledCharacter : MonoBehaviour {
 
     public IEnumerator MoveToTileCo(int x, int y, float duration)
     {
-        var speed = new Vector2(x - TileX, y - TileY);
         TileX = x;
         TileY = y;
 
         Vector3 prev_pos = transform.position;
         Vector3 new_pos = getPositionForTile(x, y);
-        if (anim != null) {
-            anim.SetFloat("DirX", speed.x);
-            anim.SetFloat("DirY", speed.y);
-            var spd = 1f;
-            if (playerController.equippedItem == PlayerItem.Boots) {
-                spd = spd * 2f;
-            }
-            anim.SetFloat("Speed", spd);
-        }
         
         for (float t = 0; t <= duration; t += Time.deltaTime)
         {

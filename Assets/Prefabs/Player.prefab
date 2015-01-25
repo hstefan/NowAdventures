@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11433710}
   - 61: {fileID: 6133710}
   - 50: {fileID: 5033710}
+  - 95: {fileID: 9521378}
   m_Layer: 8
   m_Name: Player
   m_TagString: player
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -9.5, z: 0}
+  m_LocalPosition: {x: 1.5, y: -7.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,6 +59,21 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .800000012, y: .800000012}
   m_Center: {x: 0, y: 0}
+--- !u!95 &9521378
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133710}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d00ee48295f35434a9d3ee0621877d98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11433710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,7 +87,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDuration: .349999994
   moveInterval: .349999994
-  direction: 0
   equippedItem: 0
 --- !u!114 &11433712
 MonoBehaviour:
@@ -84,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffccfabce9f09c2468c19147284603b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileX: 2
-  TileY: -10
+  TileX: 1
+  TileY: -8
   BaseOffset: {x: .5, y: .5, z: 0}
 --- !u!212 &21233710
 SpriteRenderer:
@@ -106,8 +121,8 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f9e168d79e195ab4993bc3b8e1606383, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 1f185a4d0cd6565429c8aed13802d63e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
