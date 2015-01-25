@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Tiled2Unity generated xml data-->
+<!--Do not modify by hand-->
+<!--Last exported: 1/25/2015 12:14:09 PM-->
+<Tiled2Unity version="0.9.7.4">
+  <AssignMaterial mesh="mesh_[00]_[09]" material="Speed_001" sortingLayerName="" sortingOrder="0" />
+  <Prefab name="Place_Holder_Tile_Map_002" numTilesWide="32" numTilesHigh="18" tileWidth="40" tileHeight="40" scale="0.025">
+    <GameObject name="Catchables_00">
+      <GameObject copy="mesh_[00]_[09]" />
+    </GameObject>
+    <GameObject name="Boundaries">
+      <GameObject name="PolylineObject" x="2" y="0">
+        <EdgeCollider2D>
+          <Points>0,0 1278,0 1278,-720 -2,-720 -2,0</Points>
+        </EdgeCollider2D>
+      </GameObject>
+      <GameObject name="PolylineObject" x="1078" y="-722">
+        <EdgeCollider2D>
+          <Points>0,0 -120,2 -118,122 -438,122 -438,162 -478,162 -478,202 -518,202 -518,242 -558,242 -558,402 -518,402 -518,522 -518,602 -518,722 -398,722 -398,602 -398,402 -398,362 -398,322 -398,282 -398,242 -358,242 -238,242 -118,242 -118,202 -78,202 -38,202 -38,162 2,162 2,2</Points>
+        </EdgeCollider2D>
+      </GameObject>
+    </GameObject>
+    <GameObject name="Object Layer 2">
+      <GameObject name="TileObject" x="600" y="-40">
+        <Property name="AddComp" value="InvisibleExit" />
+      </GameObject>
+    </GameObject>
+  </Prefab>
+  <ImportMesh filename="Place_Holder_Tile_Map_002.obj">IyBXYXZlZnJvbnQgT0JKIGZpbGUgYXV0b21hdGljYWxseSBnZW5lcmF0ZWQgYnkgVGlsZWQyVW5pdHkNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSA0KQ0KdiAtNzIwIC01NjAgMA0KdiAtNzYwIC01NjAgMA0KdiAtNzYwIC01MjAgMA0KdiAtNzIwIC01MjAgMA0KDQojIFRleHR1cmUgQ29vcmluZGF0ZXMgKENvdW50ID0gNCkNCnZ0IDAuMDAwMTIyMDcwMyAwLjAwMDEyMjA3MDMNCnZ0IDAuOTk5ODc3OSAwLjAwMDEyMjA3MDMNCnZ0IDAuOTk5ODc3OSAwLjk5OTg3NzkNCnZ0IDAuMDAwMTIyMDcwMyAwLjk5OTg3NzkNCg0KIyBOb3JtYWwNCnZuIDAgMCAtMQ0KDQojIEdyb3VwcyAoQ291bnQgPSAxKQ0KZyBtZXNoX1swMF1fWzA5XQ0KZiAgMS8xLzEgIDIvMi8xICAzLzMvMSAgNC80LzEgDQo=</ImportMesh>
+  <InternalTexture assetPath="Assets\Sprites\Speed_001.jpg" />
+</Tiled2Unity>

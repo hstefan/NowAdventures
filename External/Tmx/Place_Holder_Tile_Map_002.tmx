@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="18" tilewidth="40" tileheight="40" nextobjectid="4">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="18" tilewidth="40" tileheight="40" nextobjectid="5">
+ <properties>
+  <property name="unity:scale" value="0.025"/>
+ </properties>
  <tileset firstgid="1" name="Tiles" tilewidth="40" tileheight="40">
   <tile id="0">
-   <image width="40" height="40" source="Attack_001.jpg"/>
+   <image width="40" height="40" source="../../Assets/Sprites/Attack_001.jpg"/>
   </tile>
   <tile id="1">
-   <image width="40" height="40" source="Exit_001.jpg"/>
+   <image width="40" height="40" source="../../Assets/Sprites/Exit_001.jpg"/>
   </tile>
   <tile id="2">
-   <image width="40" height="40" source="Ground_001.jpg"/>
+   <image width="40" height="40" source="../../Assets/Sprites/Ground_001.jpg"/>
   </tile>
   <tile id="3">
-   <image width="40" height="40" source="Snow_001.jpg"/>
+   <image width="40" height="40" source="../../Assets/Sprites/Snow_001.jpg"/>
   </tile>
   <tile id="4">
-   <image width="40" height="40" source="Start_001.jpg"/>
+   <image width="40" height="40" source="../../Assets/Sprites/Start_001.jpg"/>
   </tile>
   <tile id="5">
-   <image width="40" height="40" source="Trees_001.jpg"/>
+   <image width="40" height="40" source="../../Assets/Sprites/Trees_001.jpg"/>
   </tile>
   <tile id="6">
-   <image width="40" height="40" source="../Arte/BGS/Tiles/BG_ground_rock_001.png"/>
+   <image width="40" height="40" source="../../Assets/Sprites/Tiles/BG_ground_rock_001.png"/>
   </tile>
   <tile id="7">
-   <image width="40" height="40" source="Sky_001.jpg"/>
+   <image width="40" height="40" source="../../Assets/Sprites/Sky_001.jpg"/>
   </tile>
   <tile id="8">
-   <image width="40" height="40" source="Single_Tile_001.jpg"/>
+   <image width="40" height="40" source="../../Assets/Sprites/Single_Tile_001.jpg"/>
   </tile>
   <tile id="9">
-   <image width="40" height="40" source="Speed_001.jpg"/>
+   <image width="40" height="40" source="../../Assets/Sprites/Speed_001.jpg"/>
+  </tile>
+  <tile id="10">
+   <image width="40" height="40" source="../../Assets/Sprites/exit_door.png"/>
   </tile>
  </tileset>
- <layer name="Tiles" width="32" height="18">
-  <data encoding="base64" compression="zlib">
-   eJzdj0EKwCAMBAOC2P9/2JMQQhI3MbbQgT1VnekgogGO09g00DczbsRf2aDxlt8C8Z82eKD+bMeOqD/acMOPNiA8bFFO3Y3y/+81oPzBLxsiVPlXQwbZYO0maIPX0T9s6Mqqsfyae9dinfHuST/irRz3a98n56MGjA==
-  </data>
- </layer>
  <objectgroup name="Boundaries">
   <properties>
    <property name="unity:layers" value="Blockers"/>
@@ -50,7 +51,14 @@
  </objectgroup>
  <layer name="Catchables" width="32" height="18">
   <data encoding="base64" compression="zlib">
-   eJxjYGBgYCUSIwMmJEwpIMf+UTAKRsEoGAWjAAS4BtoBo2BQAkLtBwC4AQCE
+   eJxjYBgFo2AUjIJRMAqGLuAaaAeMgiEJAB8wAAs=
   </data>
  </layer>
+ <objectgroup name="Object Layer 2">
+  <object id="4" gid="11" x="600" y="40">
+   <properties>
+    <property name="AddComp" value="InvisibleExit"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>
