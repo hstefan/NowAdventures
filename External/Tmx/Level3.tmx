@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="14" height="13" tilewidth="40" tileheight="40" backgroundcolor="#004040" nextobjectid="41">
+ <properties>
+  <property name="unity:scale" value="0.025"/>
+ </properties>
+ <tileset firstgid="1" name="Level2" tilewidth="40" tileheight="40">
+  <tile id="0">
+   <image width="40" height="40" source="../../Assets/Sprites/floor.png"/>
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="40" height="40"/>
+   </objectgroup>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="AddComp" value="Arrow"/>
+   </properties>
+   <image width="40" height="40" source="../../Assets/Sprites/arrow.png"/>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="AddComp" value="Crate"/>
+   </properties>
+   <image width="40" height="40" source="../../Assets/Sprites/crate.png"/>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="AddComp" value="Exit"/>
+   </properties>
+   <image width="40" height="40" source="../../Assets/Sprites/exit_door.png"/>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="AddComp" value="Hole"/>
+   </properties>
+   <image width="40" height="40" source="../../Assets/Sprites/hole.png"/>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="AddComp" value="Player"/>
+   </properties>
+   <image width="40" height="40" source="../../Assets/Sprites/player.png"/>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="AddComp" value="Slime"/>
+   </properties>
+   <image width="40" height="40" source="../../Assets/Sprites/slime.png"/>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="AddComp" value="Touchplate"/>
+   </properties>
+   <image width="40" height="40" source="../../Assets/Sprites/touchplate.png"/>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="14" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYKQCZiBDPbGAVPsIyeGyg1QzCekjZA8uM3G5CZc+UgAh/+FyE7nxSI+0hA0DALH8AHs=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 2">
+  <object id="12" gid="8" x="320" y="360">
+   <properties>
+    <property name="AddComp" value="Touchplate"/>
+   </properties>
+  </object>
+  <object id="13" gid="8" x="440" y="440">
+   <properties>
+    <property name="AddComp" value="Touchplate"/>
+   </properties>
+  </object>
+  <object id="14" gid="8" x="160" y="200">
+   <properties>
+    <property name="AddComp" value="Touchplate"/>
+   </properties>
+  </object>
+  <object id="15" gid="7" x="320" y="120">
+   <properties>
+    <property name="AddComp" value="Slime"/>
+   </properties>
+  </object>
+  <object id="16" gid="7" x="160" y="280">
+   <properties>
+    <property name="AddComp" value="Slime"/>
+   </properties>
+  </object>
+  <object id="18" gid="3" x="240" y="400">
+   <properties>
+    <property name="AddComp" value="Crate"/>
+   </properties>
+  </object>
+  <object id="19" gid="2" x="80" y="320">
+   <properties>
+    <property name="AddComp" value="Arrow"/>
+    <property name="Facing" value="Right"/>
+   </properties>
+  </object>
+  <object id="20" gid="7" x="440" y="360">
+   <properties>
+    <property name="AddComp" value="Slime"/>
+   </properties>
+  </object>
+  <object id="21" gid="2" x="40" y="360">
+   <properties>
+    <property name="AddComp" value="Arrow"/>
+    <property name="Facing" value="Right"/>
+   </properties>
+  </object>
+  <object id="22" gid="2" x="160" y="80">
+   <properties>
+    <property name="AddComp" value="Arrow"/>
+    <property name="Facing" value="Down"/>
+   </properties>
+  </object>
+  <object id="23" gid="4" x="80" y="120">
+   <properties>
+    <property name="AddComp" value="Exit"/>
+   </properties>
+  </object>
+  <object id="30" gid="7" x="160" y="400">
+   <properties>
+    <property name="AddComp" value="Slime"/>
+   </properties>
+  </object>
+  <object id="31" gid="2" x="480" y="120">
+   <properties>
+    <property name="AddComp" value="Arrow"/>
+    <property name="Facing" value="Left"/>
+   </properties>
+  </object>
+  <object id="32" gid="7" x="440" y="120">
+   <properties>
+    <property name="AddComp" value="Slime"/>
+   </properties>
+  </object>
+  <object id="33" gid="2" x="440" y="480">
+   <properties>
+    <property name="AddComp" value="Arrow"/>
+    <property name="Facing" value="Up"/>
+   </properties>
+  </object>
+  <object id="34" gid="5" x="240" y="440">
+   <properties>
+    <property name="AddComp" value="Hole"/>
+   </properties>
+  </object>
+  <object id="35" gid="5" x="160" y="160">
+   <properties>
+    <property name="AddComp" value="Hole"/>
+   </properties>
+  </object>
+  <object id="36" gid="5" x="120" y="320">
+   <properties>
+    <property name="AddComp" value="Hole"/>
+   </properties>
+  </object>
+  <object id="37" gid="5" x="120" y="360">
+   <properties>
+    <property name="AddComp" value="Hole"/>
+   </properties>
+  </object>
+  <object id="38" gid="5" x="200" y="360">
+   <properties>
+    <property name="AddComp" value="Hole"/>
+   </properties>
+  </object>
+  <object id="39" gid="5" x="120" y="280"/>
+  <object id="40" gid="5" x="400" y="360"/>
+ </objectgroup>
+</map>

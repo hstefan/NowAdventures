@@ -263,8 +263,10 @@ public class PlayerController : MonoBehaviour
     {
         controllable = false;
         new_direction = PlayerDirection.None;
+        direction = PlayerDirection.None;
         anim.SetTrigger("Dying");
         gameObject.tag = null;
+        collider2D.enabled = false;
         StartCoroutine(WaitAndDie(2f));
     }
 
