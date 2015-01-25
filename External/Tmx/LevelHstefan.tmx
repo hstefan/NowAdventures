@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="12" height="9" tilewidth="40" tileheight="40" backgroundcolor="#005500" nextobjectid="20">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="12" height="9" tilewidth="40" tileheight="40" backgroundcolor="#005500" nextobjectid="28">
  <properties>
   <property name="unity:scale" value="0.025"/>
  </properties>
@@ -34,11 +34,16 @@
  </tileset>
  <layer name="Tile Layer 1" width="12" height="9">
   <data encoding="base64" compression="zlib">
-   eJxjYWBgYCEDM+ChGZD46GL4ALrZpLgFl3m4xIg1C5ffCNlJinpSwgkAy9AAvQ==
+   eJxjYWBgYMGDGfCIEwKkqMWllxiMzwxcYsSaxYJGE+NuUtWTEk4Aq3AApQ==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="2" gid="3" x="320" y="40"/>
+  <object id="2" gid="3" x="320" y="40">
+   <properties>
+    <property name="AddComp" value="Exit"/>
+    <property name="unity:isTrigger" value="true"/>
+   </properties>
+  </object>
   <object id="3" gid="7" x="160" y="200">
    <properties>
     <property name="AddComp" value="Slime"/>
@@ -86,6 +91,19 @@
    <properties>
     <property name="AddComp" value="Arrow"/>
     <property name="Facing" value="Left"/>
+    <property name="Respawning" value="true"/>
+   </properties>
+  </object>
+  <object id="21" gid="1" x="200" y="80">
+   <properties>
+    <property name="AddComp" value="Arrow"/>
+    <property name="Facing" value="Down"/>
+   </properties>
+  </object>
+  <object id="27" gid="1" x="280" y="80">
+   <properties>
+    <property name="AddComp" value="Arrow"/>
+    <property name="Facing" value="Down"/>
    </properties>
   </object>
  </objectgroup>

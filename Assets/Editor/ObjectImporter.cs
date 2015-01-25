@@ -36,6 +36,9 @@ public class ObjectImporter : ICustomTiledImporter {
                     if (props.ContainsKey("MoveDuration")) {
                         arrow.MoveDuration = float.Parse(props["MoveDuration"]);
                     }
+                    if (props.ContainsKey("Respawning")) {
+                        arrow.Respawning = props["Respawning"] == "true";
+                    }
                     if (props.ContainsKey("Facing")) {
                         var facing = props["Facing"];
                         switch (facing) {
