@@ -1,50 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 1/24/2015 3:58:31 PM-->
+<!--Last exported: 1/25/2015 9:02:15 AM-->
 <Tiled2Unity version="0.9.7.4">
   <AssignMaterial mesh="mesh_[00]_[00]" material="floor" sortingLayerName="" sortingOrder="0" />
   <Prefab name="Level2" numTilesWide="9" numTilesHigh="13" tileWidth="40" tileHeight="40" scale="0.025">
     <GameObject name="Tile_Layer_1_00">
       <GameObject copy="mesh_[00]_[00]" />
-    </GameObject>
-    <GameObject name="Collision">
-      <GameObject name="PolylineObject" x="209" y="-51">
-        <EdgeCollider2D>
-          <Points>-9,11 111,11 111,-189 71,-189 71,-429 31,-429 31,-349 -49,-349 -49,-429 -89,-429 -89,-349 -169,-349 -169,-309 -49,-309 -49,-229 -9,-229 -9,-309 31,-309 31,-149 -9,-149 -9,-109 31,-109 31,-69 -9,-69 -9,11</Points>
-        </EdgeCollider2D>
+      <GameObject name="Collision">
+        <PolygonCollider2D>
+          <Path>360,-280 360,0 160,0 160,-240 120,-240 120,-320 0,-320 0,-440 80,-440 80,-520 320,-520 320,-280</Path>
+          <Path>240,-480 240,-400 160,-400 160,-480 120,-480 120,-400 40,-400 40,-360 160,-360 160,-280 200,-280 200,-360 240,-360 240,-200 200,-200 200,-160 240,-160 240,-120 200,-120 200,-40 320,-40 320,-240 280,-240 280,-480</Path>
+        </PolygonCollider2D>
       </GameObject>
     </GameObject>
     <GameObject name="Object Layer 2">
       <GameObject name="TileObject" x="120" y="-480">
-        <Property name="AddComp" value="Arrow" />
         <Property name="Facing" value="Up" />
+        <Property name="AddComp" value="Arrow" />
       </GameObject>
       <GameObject name="TileObject" x="160" y="-320">
-        <Property name="AddComp" value="Arrow" />
         <Property name="Facing" value="Down" />
+        <Property name="AddComp" value="Arrow" />
       </GameObject>
       <GameObject name="TileObject" x="200" y="-200">
-        <Property name="AddComp" value="Arrow" />
         <Property name="Facing" value="Right" />
+        <Property name="ObjId" value="arrow" />
+        <Property name="AddComp" value="Arrow" />
       </GameObject>
-      <GameObject name="TileObject" x="40" y="-400">
-        <Property name="AddComp" value="TouchPlate" />
+      <GameObject name="TileObject" x="240" y="-160">
+        <Property name="AddComp" value="Crate" />
       </GameObject>
       <GameObject name="TileObject" x="240" y="-80">
         <Property name="AddComp" value="Exit" />
       </GameObject>
-      <GameObject name="TileObject" x="280" y="-80">
-        <Property name="AddComp" value="Hole" />
-      </GameObject>
       <GameObject name="TileObject" x="240" y="-120">
         <Property name="AddComp" value="Hole" />
       </GameObject>
-      <GameObject name="TileObject" x="200" y="-80">
-        <Property name="AddComp" value="Hole" />
-      </GameObject>
-      <GameObject name="TileObject" x="240" y="-160">
-        <Property name="AddComp" value="Crate" />
+      <GameObject name="TileObject" x="40" y="-400">
+        <Property name="Target" value="arrow" />
+        <Property name="AddComp" value="Touchplate" />
       </GameObject>
     </GameObject>
   </Prefab>
