@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Tiled2Unity generated xml data-->
+<!--Do not modify by hand-->
+<!--Last exported: 1/25/2015 8:29:15 AM-->
+<Tiled2Unity version="0.9.7.4">
+  <AssignMaterial mesh="mesh_[00]_[03]" material="floor" sortingLayerName="" sortingOrder="0" />
+  <Prefab name="Level5" numTilesWide="12" numTilesHigh="9" tileWidth="40" tileHeight="40" scale="0.025">
+    <GameObject name="Tile_Layer_1_00">
+      <GameObject copy="mesh_[00]_[03]" />
+      <GameObject name="Collision">
+        <PolygonCollider2D>
+          <Path>360,-40 440,-40 440,-80 480,-80 480,0 360,0</Path>
+          <Path>40,-80 80,-80 80,-40 320,-40 320,0 0,0 0,-120 40,-120</Path>
+          <Path>80,-160 280,-160 280,-200 80,-200 80,-320 40,-320 40,-160 0,-160 0,-360 120,-360 120,-240 320,-240 320,-160 480,-160 480,-120 80,-120</Path>
+        </PolygonCollider2D>
+      </GameObject>
+    </GameObject>
+    <GameObject name="Object Layer 1">
+      <GameObject name="TileObject" x="320" y="-40" isTrigger="true">
+        <Property name="AddComp" value="Exit" />
+      </GameObject>
+      <GameObject name="TileObject" x="160" y="-200">
+        <Property name="AddComp" value="Slime" />
+      </GameObject>
+      <GameObject name="TileObject" x="240" y="-200">
+        <Property name="AddComp" value="Touchplate" />
+      </GameObject>
+      <GameObject name="TileObject" x="40" y="-320" />
+      <GameObject name="TileObject" x="40" y="-280">
+        <Property name="AddComp" value="Crate" />
+      </GameObject>
+      <GameObject name="TileObject" x="40" y="-240">
+        <Property name="AddComp" value="Hole" />
+      </GameObject>
+      <GameObject name="TileObject" x="40" y="-200">
+        <Property name="AddComp" value="Slime" />
+      </GameObject>
+      <GameObject name="TileObject" x="0" y="-160">
+        <Property name="AddComp" value="Arrow" />
+      </GameObject>
+      <GameObject name="TileObject" x="120" y="-80">
+        <Property name="AddComp" value="Arrow" />
+        <Property name="Facing" value="Down" />
+      </GameObject>
+      <GameObject name="TileObject" x="200" y="-80">
+        <Property name="AddComp" value="Arrow" />
+        <Property name="Facing" value="Down" />
+      </GameObject>
+      <GameObject name="TileObject" x="440" y="-120">
+        <Property name="AddComp" value="Arrow" />
+        <Property name="Facing" value="Left" />
+        <Property name="Respawning" value="false" />
+      </GameObject>
+      <GameObject name="TileObject" x="280" y="-80">
+        <Property name="AddComp" value="Arrow" />
+        <Property name="Facing" value="Down" />
+      </GameObject>
+    </GameObject>
+  </Prefab>
+  <ImportMesh filename="Level5.obj">IyBXYXZlZnJvbnQgT0JKIGZpbGUgYXV0b21hdGljYWxseSBnZW5lcmF0ZWQgYnkgVGlsZWQyVW5pdHkNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSA4NykNCnYgMCAtNDAgMA0KdiAtNDAgLTQwIDANCnYgLTQwIDAgMA0KdiAwIDAgMA0KdiAtODAgLTQwIDANCnYgLTgwIDAgMA0KdiAtMTIwIC00MCAwDQp2IC0xMjAgMCAwDQp2IC0xNjAgLTQwIDANCnYgLTE2MCAwIDANCnYgLTIwMCAtNDAgMA0KdiAtMjAwIDAgMA0KdiAtMjQwIC00MCAwDQp2IC0yNDAgMCAwDQp2IC0yODAgLTQwIDANCnYgLTI4MCAwIDANCnYgLTMyMCAtNDAgMA0KdiAtMzIwIDAgMA0KdiAtMzYwIC00MCAwDQp2IC00MDAgLTQwIDANCnYgLTQwMCAwIDANCnYgLTM2MCAwIDANCnYgLTQ0MCAtNDAgMA0KdiAtNDQwIDAgMA0KdiAtNDgwIC00MCAwDQp2IC00ODAgMCAwDQp2IDAgLTgwIDANCnYgLTQwIC04MCAwDQp2IC04MCAtODAgMA0KdiAtNDQwIC04MCAwDQp2IC00ODAgLTgwIDANCnYgMCAtMTIwIDANCnYgLTQwIC0xMjAgMA0KdiAtODAgLTE2MCAwDQp2IC0xMjAgLTE2MCAwDQp2IC0xMjAgLTEyMCAwDQp2IC04MCAtMTIwIDANCnYgLTE2MCAtMTYwIDANCnYgLTE2MCAtMTIwIDANCnYgLTIwMCAtMTYwIDANCnYgLTIwMCAtMTIwIDANCnYgLTI0MCAtMTYwIDANCnYgLTI0MCAtMTIwIDANCnYgLTI4MCAtMTYwIDANCnYgLTI4MCAtMTIwIDANCnYgLTMyMCAtMTYwIDANCnYgLTMyMCAtMTIwIDANCnYgLTM2MCAtMTYwIDANCnYgLTM2MCAtMTIwIDANCnYgLTQwMCAtMTYwIDANCnYgLTQwMCAtMTIwIDANCnYgLTQ0MCAtMTYwIDANCnYgLTQ0MCAtMTIwIDANCnYgLTQ4MCAtMTYwIDANCnYgLTQ4MCAtMTIwIDANCnYgMCAtMjAwIDANCnYgLTQwIC0yMDAgMA0KdiAtNDAgLTE2MCAwDQp2IDAgLTE2MCAwDQp2IC0yODAgLTIwMCAwDQp2IC0zMjAgLTIwMCAwDQp2IDAgLTI0MCAwDQp2IC00MCAtMjQwIDANCnYgLTgwIC0yNDAgMA0KdiAtMTIwIC0yNDAgMA0KdiAtMTIwIC0yMDAgMA0KdiAtODAgLTIwMCAwDQp2IC0xNjAgLTI0MCAwDQp2IC0xNjAgLTIwMCAwDQp2IC0yMDAgLTI0MCAwDQp2IC0yMDAgLTIwMCAwDQp2IC0yNDAgLTI0MCAwDQp2IC0yNDAgLTIwMCAwDQp2IC0yODAgLTI0MCAwDQp2IC0zMjAgLTI0MCAwDQp2IDAgLTI4MCAwDQp2IC00MCAtMjgwIDANCnYgLTgwIC0yODAgMA0KdiAtMTIwIC0yODAgMA0KdiAwIC0zMjAgMA0KdiAtNDAgLTMyMCAwDQp2IC04MCAtMzIwIDANCnYgLTEyMCAtMzIwIDANCnYgMCAtMzYwIDANCnYgLTQwIC0zNjAgMA0KdiAtODAgLTM2MCAwDQp2IC0xMjAgLTM2MCAwDQoNCiMgVGV4dHVyZSBDb29yaW5kYXRlcyAoQ291bnQgPSA0KQ0KdnQgMC4wMDAxMjIwNzAzIDAuMDAwMTIyMDcwMw0KdnQgMC45OTk4Nzc5IDAuMDAwMTIyMDcwMw0KdnQgMC45OTk4Nzc5IDAuOTk5ODc3OQ0KdnQgMC4wMDAxMjIwNzAzIDAuOTk5ODc3OQ0KDQojIE5vcm1hbA0Kdm4gMCAwIC0xDQoNCiMgR3JvdXBzIChDb3VudCA9IDEpDQpnIG1lc2hfWzAwXV9bMDNdDQpmICAxLzEvMSAgMi8yLzEgIDMvMy8xICA0LzQvMSANCmYgIDIvMS8xICA1LzIvMSAgNi8zLzEgIDMvNC8xIA0KZiAgNS8xLzEgIDcvMi8xICA4LzMvMSAgNi80LzEgDQpmICA3LzEvMSAgOS8yLzEgIDEwLzMvMSAgOC80LzEgDQpmICA5LzEvMSAgMTEvMi8xICAxMi8zLzEgIDEwLzQvMSANCmYgIDExLzEvMSAgMTMvMi8xICAxNC8zLzEgIDEyLzQvMSANCmYgIDEzLzEvMSAgMTUvMi8xICAxNi8zLzEgIDE0LzQvMSANCmYgIDE1LzEvMSAgMTcvMi8xICAxOC8zLzEgIDE2LzQvMSANCmYgIDE5LzEvMSAgMjAvMi8xICAyMS8zLzEgIDIyLzQvMSANCmYgIDIwLzEvMSAgMjMvMi8xICAyNC8zLzEgIDIxLzQvMSANCmYgIDIzLzEvMSAgMjUvMi8xICAyNi8zLzEgIDI0LzQvMSANCmYgIDI3LzEvMSAgMjgvMi8xICAyLzMvMSAgMS80LzEgDQpmICAyOC8xLzEgIDI5LzIvMSAgNS8zLzEgIDIvNC8xIA0KZiAgMzAvMS8xICAzMS8yLzEgIDI1LzMvMSAgMjMvNC8xIA0KZiAgMzIvMS8xICAzMy8yLzEgIDI4LzMvMSAgMjcvNC8xIA0KZiAgMzQvMS8xICAzNS8yLzEgIDM2LzMvMSAgMzcvNC8xIA0KZiAgMzUvMS8xICAzOC8yLzEgIDM5LzMvMSAgMzYvNC8xIA0KZiAgMzgvMS8xICA0MC8yLzEgIDQxLzMvMSAgMzkvNC8xIA0KZiAgNDAvMS8xICA0Mi8yLzEgIDQzLzMvMSAgNDEvNC8xIA0KZiAgNDIvMS8xICA0NC8yLzEgIDQ1LzMvMSAgNDMvNC8xIA0KZiAgNDQvMS8xICA0Ni8yLzEgIDQ3LzMvMSAgNDUvNC8xIA0KZiAgNDYvMS8xICA0OC8yLzEgIDQ5LzMvMSAgNDcvNC8xIA0KZiAgNDgvMS8xICA1MC8yLzEgIDUxLzMvMSAgNDkvNC8xIA0KZiAgNTAvMS8xICA1Mi8yLzEgIDUzLzMvMSAgNTEvNC8xIA0KZiAgNTIvMS8xICA1NC8yLzEgIDU1LzMvMSAgNTMvNC8xIA0KZiAgNTYvMS8xICA1Ny8yLzEgIDU4LzMvMSAgNTkvNC8xIA0KZiAgNjAvMS8xICA2MS8yLzEgIDQ2LzMvMSAgNDQvNC8xIA0KZiAgNjIvMS8xICA2My8yLzEgIDU3LzMvMSAgNTYvNC8xIA0KZiAgNjQvMS8xICA2NS8yLzEgIDY2LzMvMSAgNjcvNC8xIA0KZiAgNjUvMS8xICA2OC8yLzEgIDY5LzMvMSAgNjYvNC8xIA0KZiAgNjgvMS8xICA3MC8yLzEgIDcxLzMvMSAgNjkvNC8xIA0KZiAgNzAvMS8xICA3Mi8yLzEgIDczLzMvMSAgNzEvNC8xIA0KZiAgNzIvMS8xICA3NC8yLzEgIDYwLzMvMSAgNzMvNC8xIA0KZiAgNzQvMS8xICA3NS8yLzEgIDYxLzMvMSAgNjAvNC8xIA0KZiAgNzYvMS8xICA3Ny8yLzEgIDYzLzMvMSAgNjIvNC8xIA0KZiAgNzgvMS8xICA3OS8yLzEgIDY1LzMvMSAgNjQvNC8xIA0KZiAgODAvMS8xICA4MS8yLzEgIDc3LzMvMSAgNzYvNC8xIA0KZiAgODIvMS8xICA4My8yLzEgIDc5LzMvMSAgNzgvNC8xIA0KZiAgODQvMS8xICA4NS8yLzEgIDgxLzMvMSAgODAvNC8xIA0KZiAgODUvMS8xICA4Ni8yLzEgIDgyLzMvMSAgODEvNC8xIA0KZiAgODYvMS8xICA4Ny8yLzEgIDgzLzMvMSAgODIvNC8xIA0K</ImportMesh>
+  <InternalTexture assetPath="Assets\Sprites\floor.png" />
+</Tiled2Unity>
