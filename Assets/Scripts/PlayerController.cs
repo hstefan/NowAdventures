@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
         controllable = true;
 
         anim.SetFloat("DirX", 0f);
-        anim.SetFloat("DirY", 0f);
+        anim.SetFloat("DirY", -1f);
         anim.SetFloat("Speed", 0f);
     }
 
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
             int new_x = -1;
             int new_y = -1;
             bool moved = false;
-            bool blocked = true;
+            bool blocked = false;
 
             if (new_direction != PlayerDirection.None)
             {
@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            if (new_direction == PlayerDirection.None)
+            if (new_direction == PlayerDirection.None && direction != PlayerDirection.None)
             {
                 TryToMoveInDirection(direction, move_duration, out blocked, out moved, out new_x, out new_y);
             }
