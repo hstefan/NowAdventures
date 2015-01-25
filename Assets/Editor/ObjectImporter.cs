@@ -3,23 +3,29 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 using Tiled2Unity;
+using System;
 
 [CustomTiledImporter]
 public class ObjectImporter : ICustomTiledImporter {
     private Transform mapRoot;
+    private Dictionary<string, GameObject> objectIds = new Dictionary<string, GameObject>();
+    private Dictionary<string, List<Predicate<GameObject>>> objectIdBackpatches = new Dictionary<string, List<Predicate<GameObject>>>();
 
     public void HandleCustomProperties(UnityEngine.GameObject gameObject,
-        IDictionary<string, string> props) {
-        Debug.Log("Custom properties!");
+        IDictionary<string, string> props)
+    {
         var map = gameObject.GetComponentInParent<TiledMap>();
-        if (props.ContainsKey("AddComp")) {
-            var pos = gameObject.transform.position;
-            //gameObject.AddComponent(props["AddComp"]);
+        GameObject inst = null;
 
-            string prefab = string.Format("Assets/Prefabs/{0}.prefab", props["AddComp"]);
+        if (props.ContainsKey("AddComp"))
+        {
+            string prefab_name = props["AddComp"];
+            var pos = gameObject.transform.position;
+
+            string prefab = string.Format("Assets/Prefabs/{0}.prefab", prefab_name);
             var go = AssetDatabase.LoadAssetAtPath(prefab, typeof(GameObject));
             if (go != null) {
-                var inst = (GameObject)GameObject.Instantiate(go);
+                inst = (GameObject)GameObject.Instantiate(go);
                 inst.name = go.name;
                 inst.transform.parent = gameObject.transform;
                 inst.transform.localPosition = Vector3.zero;
@@ -31,7 +37,7 @@ public class ObjectImporter : ICustomTiledImporter {
                     tiledComp.TileY = Mathf.RoundToInt(pos.y / map.TileHeight);
                 }
 
-                if (props["AddComp"] == "Arrow") {
+                if (prefab_name == "Arrow") {
                     var arrow = inst.GetComponent<Arrow>();
                     if (props.ContainsKey("MoveDuration")) {
                         arrow.MoveDuration = float.Parse(props["MoveDuration"]);
@@ -57,10 +63,52 @@ public class ObjectImporter : ICustomTiledImporter {
                         }
                     }
                 }
+                else if (prefab_name == "Touchplate")
+                {
+                    var touchplate = inst.GetComponent<Touchplate>();
+                    if (props.ContainsKey("Target"))
+                    {
+                        WithIdReference(props["Target"], target => touchplate.Target = target);
+                    }
+                }
+            }
+        }
+
+        if (props.ContainsKey("ObjId"))
+        {
+            string obj_id = props["ObjId"];
+            objectIds.Add(obj_id, inst);
+            List<Predicate<GameObject>> patch_list;
+            if (objectIdBackpatches.TryGetValue(obj_id, out patch_list))
+            {
+                foreach (Predicate<GameObject> pred in patch_list)
+                {
+                    pred(inst);
+                }
+                objectIdBackpatches.Remove(obj_id);
             }
         }
     }
 
     public void CustomizePrefab(GameObject prefab) {
+    }
+
+    private void WithIdReference(string objId, Predicate<GameObject> pred)
+    {
+        GameObject go;
+        if (objectIds.TryGetValue(objId, out go))
+        {
+            pred(go);
+        }
+        else
+        {
+            List<Predicate<GameObject>> pred_list;
+            if (!objectIdBackpatches.TryGetValue(objId, out pred_list))
+            {
+                pred_list = new List<Predicate<GameObject>>();
+                objectIdBackpatches.Add(objId, pred_list);
+            }
+            pred_list.Add(pred);
+        }
     }
 }
