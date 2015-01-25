@@ -58,7 +58,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Size: {x: .800000012, y: .800000012}
-  m_Center: {x: 0, y: 0}
+  m_Center: {x: 0, y: -.275000006}
 --- !u!95 &9521378
 Animator:
   serializedVersion: 3
@@ -97,6 +97,7 @@ MonoBehaviour:
     Uses: 0
   - Item: 0
     Uses: 999
+  canClone: 1
 --- !u!114 &11433712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,9 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffccfabce9f09c2468c19147284603b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileX: 18
-  TileY: -18
-  BaseOffset: {x: .5, y: .5, z: 0}
+  TileX: 0
+  TileY: 0
+  BaseOffset: {x: .5, y: .75, z: 0}
 --- !u!212 &21233710
 SpriteRenderer:
   m_ObjectHideFlags: 1

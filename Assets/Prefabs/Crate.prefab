@@ -57,7 +57,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Size: {x: .949999988, y: .949999988}
-  m_Center: {x: 0, y: 0}
+  m_Center: {x: 0, y: -.275000006}
 --- !u!114 &11453068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TileX: 2
   TileY: -9
-  BaseOffset: {x: .5, y: .5, z: 0}
+  BaseOffset: {x: .5, y: .75, z: 0}
 --- !u!212 &21253070
 SpriteRenderer:
   m_ObjectHideFlags: 1
