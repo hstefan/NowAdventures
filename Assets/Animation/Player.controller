@@ -111,6 +111,47 @@ BlendTree:
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
   m_BlendType: 2
+--- !u!206 &20661106
+BlendTree:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Blend Tree
+  m_Childs:
+  - m_Motion: {fileID: 7400000, guid: 459eebf655d907a44ba71c87f60b1835, type: 2}
+    m_Threshold: 0
+    m_Position: {x: 0, y: -1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_IsAnim: 1
+    m_Mirror: 0
+  - m_Motion: {fileID: 7400000, guid: 9aee05118bed5ab47a40bc1232869a7e, type: 2}
+    m_Threshold: .333333343
+    m_Position: {x: 0, y: 1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_IsAnim: 1
+    m_Mirror: 0
+  - m_Motion: {fileID: 7400000, guid: a5050d1cff3958f458e726f295fc4444, type: 2}
+    m_Threshold: .666666687
+    m_Position: {x: -1, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_IsAnim: 1
+    m_Mirror: 0
+  - m_Motion: {fileID: 7400000, guid: d4711a112796799449752c740c02d736, type: 2}
+    m_Threshold: 1
+    m_Position: {x: 1, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_IsAnim: 1
+    m_Mirror: 0
+  m_BlendParameter: DirX
+  m_BlendParameterY: DirY
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 1
+  m_BlendType: 2
 --- !u!206 &20665388
 BlendTree:
   m_ObjectHideFlags: 3
@@ -213,6 +254,26 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
+--- !u!1101 &110113108
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110252806}
+  m_DstState: {fileID: 110261106}
+  m_TransitionDuration: .212765947
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 3
+    m_ConditionEvent: Speed
+    m_EventTreshold: 1.10000002
+    m_ExitTime: .787234068
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
 --- !u!1101 &110135756
 Transition:
   serializedVersion: 2
@@ -273,6 +334,26 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
+--- !u!1101 &110179508
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110261106}
+  m_DstState: {fileID: 110252806}
+  m_TransitionDuration: .247252747
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: Speed
+    m_EventTreshold: 1.10000002
+    m_ExitTime: .752747238
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
 --- !u!1101 &110187452
 Transition:
   serializedVersion: 2
@@ -328,6 +409,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110261106
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Run
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 20661106}
+  m_ParentStateMachine: {fileID: 110714794}
+  m_Position: {x: 600, y: -60, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1102 &110265388
 State:
   m_ObjectHideFlags: 3
@@ -370,24 +466,30 @@ StateMachine:
   - {fileID: 110265388}
   - {fileID: 110252806}
   - {fileID: 110295516}
+  - {fileID: 110261106}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
+    data:
+      first: {fileID: 110265388}
+      second:
+      - {fileID: 110137846}
+      - {fileID: 110177202}
+    data:
+      first: {fileID: 110252806}
+      second:
+      - {fileID: 110187452}
+      - {fileID: 110197956}
+      - {fileID: 110113108}
     data:
       first: {fileID: 110295516}
       second:
       - {fileID: 110102816}
       - {fileID: 110135756}
     data:
-      first: {fileID: 110252806}
+      first: {fileID: 110261106}
       second:
-      - {fileID: 110187452}
-      - {fileID: 110197956}
-    data:
-      first: {fileID: 110265388}
-      second:
-      - {fileID: 110137846}
-      - {fileID: 110177202}
+      - {fileID: 110179508}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

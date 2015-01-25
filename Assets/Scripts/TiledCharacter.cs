@@ -11,10 +11,12 @@ public class TiledCharacter : MonoBehaviour {
     private Vector3 BaseOffset;
     private Animator anim;
     private Coroutine moveCoroutine;
+    private PlayerController playerController;
 
     void Awake() {
         mapOrigin = FindObjectOfType<Tiled2Unity.TiledMap>().transform;
         anim = GetComponent<Animator>();
+        playerController = GetComponent<PlayerController>();
     }
 
     void Start()
@@ -77,7 +79,11 @@ public class TiledCharacter : MonoBehaviour {
         if (anim != null) {
             anim.SetFloat("DirX", speed.x);
             anim.SetFloat("DirY", speed.y);
-            anim.SetFloat("Speed", 1f);
+            var spd = 1f;
+            if (playerController.equippedItem == PlayerItem.Boots) {
+                spd = spd * 2f;
+            }
+            anim.SetFloat("Speed", spd);
         }
         
         for (float t = 0; t <= duration; t += Time.deltaTime)
