@@ -765,7 +765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 42feb8ca8e7931c4092686e9a1f1c3a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 33e6c15ac579cc74cbe3b68b281be11b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1172,6 +1172,10 @@ Prefab:
       propertyPath: usesPerItem.Array.data[2].Item
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11433710, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
+      propertyPath: canClone
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f826687366c1c7148aaeead7bf3479e2, type: 2}
   m_RootGameObject: {fileID: 1247098979}
@@ -1390,7 +1394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 42feb8ca8e7931c4092686e9a1f1c3a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 98e1e93fb507000448bcc2cf4a05c895, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1883,6 +1887,7 @@ MonoBehaviour:
     Uses: 0
   - Item: 0
     Uses: 0
+  canClone: 0
 --- !u!114 &1247098984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2233,7 +2238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 42feb8ca8e7931c4092686e9a1f1c3a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c482fc8fdbc3634d83c7281270a84d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

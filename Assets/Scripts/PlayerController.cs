@@ -38,7 +38,8 @@ public class PlayerController : MonoBehaviour
     public PlayerItem equippedItem;
     [SerializeField]
     public ItemUses[] usesPerItem;
-
+    [SerializeField]
+    private bool canClone = true;
     [System.NonSerialized]
     public bool controllable;
 
@@ -139,7 +140,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (moved)
                 {
-                    if (direction != PlayerDirection.None)
+                    if (direction != PlayerDirection.None && canClone)
                     {
                         // Split player
                         GameObject new_player_go = (GameObject)Instantiate(gameObject);
