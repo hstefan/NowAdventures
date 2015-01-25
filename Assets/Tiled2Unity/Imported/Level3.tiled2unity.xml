@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 1/25/2015 3:49:24 PM-->
+<!--Last exported: 1/25/2015 4:01:42 PM-->
 <Tiled2Unity version="0.9.7.4">
   <AssignMaterial mesh="mesh_[00]_[20]" material="Parede" sortingLayerName="Background" sortingOrder="0" />
   <AssignMaterial mesh="mesh_[00]_[21]" material="Paredes1xT" sortingLayerName="Background" sortingOrder="0" />
@@ -55,19 +55,25 @@
         <Property name="AddComp" value="Touchplate" />
       </GameObject>
       <GameObject name="TileObject" x="160" y="-80">
+        <Property name="Facing" value="Down" />
+        <Property name="ObjId" value="arrow_1l" />
         <Property name="AddComp" value="Arrow" />
       </GameObject>
       <GameObject name="TileObject" x="80" y="-320">
+        <Property name="Facing" value="Right" />
         <Property name="AddComp" value="Arrow" />
       </GameObject>
       <GameObject name="TileObject" x="40" y="-360">
+        <Property name="Facing" value="Right" />
         <Property name="AddComp" value="Arrow" />
       </GameObject>
       <GameObject name="TileObject" x="440" y="-480">
+        <Property name="Facing" value="Up" />
         <Property name="ObjId" value="arrow_2" />
         <Property name="AddComp" value="Arrow" />
       </GameObject>
       <GameObject name="TileObject" x="480" y="-120">
+        <Property name="Facing" value="Left" />
         <Property name="ObjId" value="arrow_3" />
         <Property name="AddComp" value="Arrow" />
       </GameObject>
@@ -91,7 +97,7 @@
         <Property name="AddComp" value="Touchplate" />
       </GameObject>
       <GameObject name="TileObject" x="320" y="-360">
-        <Property name="Target" value="arrow_1" />
+        <Property name="Target" value="arrow_1l" />
         <Property name="AddComp" value="Touchplate" />
       </GameObject>
       <GameObject name="TileObject" x="160" y="-160">

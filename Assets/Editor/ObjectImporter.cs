@@ -77,6 +77,7 @@ public class ObjectImporter : ICustomTiledImporter {
         if (props.ContainsKey("ObjId"))
         {
             string obj_id = props["ObjId"];
+            if (objectIds.ContainsKey(obj_id)) { Debug.Log(obj_id); }
             objectIds.Add(obj_id, inst);
             List<Predicate<GameObject>> patch_list;
             if (objectIdBackpatches.TryGetValue(obj_id, out patch_list))
