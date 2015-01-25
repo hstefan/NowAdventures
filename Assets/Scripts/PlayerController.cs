@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField, HideInInspector]
     public PlayerItem equippedItem;
     [SerializeField]
-    private ItemUses[] usesPerItem;
+    public ItemUses[] usesPerItem;
 
     [System.NonSerialized]
     public bool controllable;
